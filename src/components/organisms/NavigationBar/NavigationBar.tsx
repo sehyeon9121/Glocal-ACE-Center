@@ -36,7 +36,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
 
   const peopleDropdownItems = [
     { label: t('nav.ourTeam'), href: '/team' },
-    { label: t('nav.joinUs'), href: '/join-us' },
+    // { label: t('nav.joinUs'), href: '/join-us' },  // 비활성화
   ];
 
   const newsDropdownItems = [
@@ -134,7 +134,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
         {/* Logo */}
         <div className="flex items-center">
           <LogoImage
-            src="/images/leeseunglab/terrer-lab-logo.png"
+            src="/images/leeseunglab/terrer-lab-logo.jpg"
             alt="Terrer Lab"
             href="/"
             height={51}
@@ -163,10 +163,10 @@ export function NavigationBar({ className }: NavigationBarProps) {
             items={peopleDropdownItems}
           />
 
-          <DropdownMenu
+          {/* <DropdownMenu
             label={t('nav.news')}
             items={newsDropdownItems}
-          />
+          /> */}
 
           <LanguageSwitcher />
         </nav>
@@ -313,50 +313,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
                 </AnimatePresence>
               </div>
 
-              {/* News Accordion */}
-              <div>
-                <button
-                  type="button"
-                  onClick={() => toggleSubmenu('news')}
-                  className="flex items-center justify-between w-full h-12 hover:bg-gray-50 transition-colors"
-                  style={{ paddingLeft: '20px', paddingRight: '20px' }}
-                >
-                  <Text size="sm" weight={500} color="text">
-                    {t('nav.news')}
-                  </Text>
-                  <motion.div
-                    animate={{ rotate: expandedMenu === 'news' ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Icon name="ChevronDown" size="sm" color="text" />
-                  </motion.div>
-                </button>
-                <AnimatePresence>
-                  {expandedMenu === 'news' && (
-                    <motion.div
-                      variants={submenuVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                      className="overflow-hidden bg-gray-50"
-                    >
-                      {newsDropdownItems.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center h-11 hover:bg-gray-100 transition-colors"
-                          style={{ paddingLeft: '40px', paddingRight: '20px' }}
-                          onClick={handleNavClick}
-                        >
-                          <Text size="sm" weight={500} color="text">
-                            {item.label}
-                          </Text>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              {/* News Accordion - 비활성화 */}
 
               {/* Language Toggle */}
               <div className="border-t border-gray-200 mt-2 pt-2">

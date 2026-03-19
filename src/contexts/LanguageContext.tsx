@@ -140,12 +140,12 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.climateSnacks': '기후 스낵',
 
     // Home Page - Hero
-    'home.hero.subtitle': 'ACT INSITUTE LAB | 한국기술교육대학교 건축공학과',
-    'home.hero.title': 'AI 탄소중립 목조 연구소',
-    'home.hero.description': '지구를 위해 행동하고, 목재를 위해 기술을 혁신하다.',
+    'home.hero.subtitle': 'Glocal ACE Center',
+    'home.hero.title': 'AI 기반 글로컬 탄소중립 ACE 센터',
+    'home.hero.description': '지속가능한 미래를 위한 AI 기반 탄소중립 솔루션.',
     // Home Page - About
-    'home.about.title': 'ACT Lab',
-    'home.about.description': 'ACT Lab은 AI와 건축 공학의 결합을 통해 대공간 목구조의 새로운 가능성을 탐구하는 연구소입니다. 우리는 목재라는 재료가 지닌 잠재력을 지능형 설계와 데이터 기반 기술로 확장하여, 구조적 안정성과 환경적 책임을 동시에 달성하고자 합니다. 설계검토에 그치지 않고 실제 건축 환경을 고려한 분석과 검증을 통해, 탄소중립 건축이 이론이 아닌 현실적인 선택이 될 수 있도록 연구를 이어가고 있습니다.',
+    'home.about.title': 'Glocal ACE Center',
+    'home.about.description': 'Glocal ACE Center는 AI 기반 설계·해석·최적화 기술을 바탕으로, 탄소중립 건축 실현을 위한 목조건축, 저탄소 구조시스템, 건축물 전과정 탄소평가, 친환경 에너지 및 스마트건설 기술을 연구하는 융합형 연구센터입니다. 지역의 산업·환경 특성을 반영한 실증 연구를 통해 글로컬 탄소중립 건축의 새로운 해법을 제시합니다.',
     'home.research.title': '연구 주제',
     'home.research.subtitle': '미래를 위한 연구',
     'home.bigQuestions.title': '핵심 연구 구성',
