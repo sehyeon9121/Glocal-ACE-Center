@@ -36,6 +36,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
 
   const peopleDropdownItems = [
     { label: t('nav.ourTeam'), href: '/team' },
+    { label: t('nav.researchGroup'), href: '/research-group' },
     // { label: t('nav.joinUs'), href: '/join-us' },  // 비활성화
   ];
 

@@ -44,3 +44,11 @@ export type { FooterContentProps } from './FooterContent';
 // Affiliations
 export { AffiliationLogo } from './AffiliationLogo';
 export type { AffiliationLogoProps } from './AffiliationLogo';
+
+// Organization
+export { OrganizationChart } from './OrganizationChart';
+export type { OrganizationChartProps } from './OrganizationChart';
+
+// Research Group
+export { ResearcherProfileCard } from './ResearcherProfileCard';
+export type { ResearcherProfileCardProps } from './ResearcherProfileCard';

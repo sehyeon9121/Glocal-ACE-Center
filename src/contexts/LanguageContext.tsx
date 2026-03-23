@@ -20,6 +20,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.people': 'People',
     'nav.news': 'News',
     'nav.ourTeam': 'Our Team',
+    'nav.researchGroup': 'Research Group',
     'nav.joinUs': 'ACT INSTITUTE',
     'nav.newsUpdates': 'News & Updates',
     'nav.climateSnacks': 'Climate Snacks',
@@ -81,6 +82,10 @@ const translations: Record<Language, Record<string, string>> = {
     'team.team': 'Team',
     'team.alumni': 'Undergraduate Student',
 
+    // Research Group Page
+    'researchGroup.pageTitle': 'Research Group',
+    'researchGroup.sectionTitle': 'Research Group',
+
     // Join Us Page
     'joinUs.title': 'Join Us',
     'joinUs.subtitle': 'ACT LAB',
@@ -134,7 +139,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.publications': '출판물',
     'nav.people': '구성원',
     'nav.news': '뉴스',
-    'nav.ourTeam': '연구팀',
+    'nav.ourTeam': '센터 체계도',
+    'nav.researchGroup': '연구단',
     'nav.joinUs': 'ACT INSTITUTE',
     'nav.newsUpdates': '뉴스 및 업데이트',
     'nav.climateSnacks': '기후 스낵',
@@ -195,6 +201,11 @@ const translations: Record<Language, Record<string, string>> = {
     'team.title': 'ACT LAB을 소개합니다',
     'team.team': '팀',
     'team.alumni': '학부생',
+
+    // Research Group Page
+    'researchGroup.pageTitle': '연구단',
+    'researchGroup.sectionTitle': 'Glocal ACE Center',
+    
 
     // Join Us Page
     'joinUs.title': 'ACT INSTITUTE',

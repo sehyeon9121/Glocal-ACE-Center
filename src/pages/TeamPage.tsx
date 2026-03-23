@@ -1,9 +1,8 @@
 import { DetailPageLayout } from '@/components/templates/DetailPageLayout';
 import { ContentSection } from '@/components/templates/ContentSection';
 import { Container } from '@/components/atoms/Container';
-import { TeamMemberCard } from '@/components/organisms/TeamMemberCard';
+import { OrganizationChart } from '@/components/organisms/OrganizationChart';
 import { SectionHeader } from '@/components/molecules/SectionHeader';
-import { teamMembers } from '@/data/teamMembers';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export function TeamPage() {
@@ -14,19 +13,11 @@ export function TeamPage() {
       title={t('team.title')}
       heroImage="/images/leeseunglab/people-hero.jpg"
     >
-      {/* Team Section */}
-      <ContentSection background="white" padding="lg" style={{ paddingTop: 100 }}>
-        <Container maxWidth="none" className="max-w-[950px]">
-          <SectionHeader title={t('team.team')} />
-          <div>
-            {teamMembers.map((member, index) => (
-              <TeamMemberCard
-                key={member.id}
-                {...member}
-                index={index}
-              />
-            ))}
-          </div>
+      {/* Organization Chart Section */}
+      <ContentSection background="light" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>
+        <Container maxWidth="none" className="max-w-[900px]">
+          <SectionHeader title="Organization" />
+          <OrganizationChart className="mt-10" />
         </Container>
       </ContentSection>
 
