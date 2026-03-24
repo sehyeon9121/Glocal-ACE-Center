@@ -52,3 +52,7 @@ export type { OrganizationChartProps } from './OrganizationChart';
 // Research Group
 export { ResearcherProfileCard } from './ResearcherProfileCard';
 export type { ResearcherProfileCardProps } from './ResearcherProfileCard';
+
+// Professor
+export { ProfessorProfileCard } from './ProfessorProfileCard';
+export type { ProfessorProfileCardProps } from './ProfessorProfileCard';

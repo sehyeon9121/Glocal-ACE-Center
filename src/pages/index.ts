@@ -9,3 +9,4 @@ export { ContactPage } from './ContactPage';
 export { JoinUsPage } from './JoinUsPage';
 export { ClimateSnacksPage } from './ClimateSnacksPage';
 export { ResearchGroupPage } from './ResearchGroupPage';
+export { ResearcherPublicationsPage } from './ResearcherPublicationsPage';
