@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import { Heading } from '@/components/atoms/Heading';
 import { Paragraph } from '@/components/atoms/Paragraph';
 import { Spacer } from '@/components/atoms/Spacer';
 import { Divider } from '@/components/atoms/Divider';
 import { cn } from '@/utils/cn';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export interface AboutTextBoxProps {
   title: string;
@@ -15,6 +17,8 @@ export function AboutTextBox({
   description,
   className,
 }: AboutTextBoxProps) {
+  const { t } = useLanguage();
+
   return (
     <div
       className={cn(
@@ -35,6 +39,15 @@ export function AboutTextBox({
       <Paragraph color="dark" size="lg" className="leading-relaxed font-medium">
         {description}
       </Paragraph>
+
+      <Spacer size="lg" />
+
+      <Link
+        to="/greeting"
+        className="inline-block text-base font-semibold text-black hover:underline transition-colors duration-200 font-[Inter,Pretendard,sans-serif]"
+      >
+        {t('greeting.readMore')} →
+      </Link>
     </div>
   );
 }

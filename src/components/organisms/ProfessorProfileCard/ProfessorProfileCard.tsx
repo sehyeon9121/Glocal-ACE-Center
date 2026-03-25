@@ -40,7 +40,7 @@ export function ProfessorProfileCard({
             className="text-gray-500 hover:text-gray-900 transition-colors duration-200"
             title={researcher.email}
           >
-            <Mail size={22} strokeWidth={1.5} />
+            <Mail size={29} strokeWidth={1.5} />
           </a>
 
           {/* Website */}
@@ -52,7 +52,7 @@ export function ProfessorProfileCard({
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200"
               title="Website"
             >
-              <Globe size={22} strokeWidth={1.5} />
+              <Globe size={29} strokeWidth={1.5} />
             </a>
           )}
 
@@ -63,7 +63,7 @@ export function ProfessorProfileCard({
               className="text-gray-500 hover:text-gray-900 transition-colors duration-200"
               title="Publications"
             >
-              <GraduationCap size={22} strokeWidth={1.5} />
+              <GraduationCap size={29} strokeWidth={1.5} />
             </Link>
           )}
         </div>

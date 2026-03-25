@@ -15,6 +15,7 @@ import {
   ClimateSnacksPage,
   ResearchGroupPage,
   ResearcherPublicationsPage,
+  GreetingPage,
 } from '@/pages';
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/climate-snacks" element={<ClimateSnacksPage />} />
         <Route path="/research-group" element={<ResearchGroupPage />} />
         <Route path="/research-group/:email/publications" element={<ResearcherPublicationsPage />} />
+        <Route path="/greeting" element={<GreetingPage />} />
         </Routes>
       </AnimatePresence>
     </LanguageProvider>

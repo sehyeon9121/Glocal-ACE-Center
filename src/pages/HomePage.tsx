@@ -8,6 +8,7 @@ import { DecoratedSectionHeader } from '@/components/organisms/DecoratedSectionH
 import { BigQuestionCard } from '@/components/organisms/BigQuestionCard';
 import { AffiliationsSection } from '@/components/organisms/AffiliationsSection';
 import { Spacer } from '@/components/atoms/Spacer';
+import { ChevronDown } from 'lucide-react';
 import { researchThemes } from '@/data/researchThemes';
 import { bigQuestions } from '@/data/bigQuestions';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -16,14 +17,19 @@ export function HomePage() {
   const { t } = useLanguage();
 
   // 번역된 연구 주제 데이터
+  const themeKeyMap: Record<string, string> = {
+    'terrestrial-carbon': 'terrestrialCarbon',
+    'natural-climate': 'naturalClimate',
+    'smart-energy': 'smartEnergy',
+  };
   const translatedResearchThemes = researchThemes.map((theme) => ({
     ...theme,
-    title: t(`research.${theme.id === 'terrestrial-carbon' ? 'terrestrialCarbon' : 'naturalClimate'}.title`),
-    description: t(`research.${theme.id === 'terrestrial-carbon' ? 'terrestrialCarbon' : 'naturalClimate'}.description`),
+    title: t(`research.${themeKeyMap[theme.id]}.title`),
+    description: t(`research.${themeKeyMap[theme.id]}.description`),
   }));
 
-  // 번역된 Big Questions 데이터
-  const translatedQuestions = bigQuestions.map((q, index) => ({
+  // 번역된 Big Questions 데이터 (앞 4개만)
+  const translatedQuestions = bigQuestions.slice(0, 4).map((q, index) => ({
     ...q,
     question: t(`home.bigQuestions.q${index + 1}`),
   }));
@@ -42,7 +48,7 @@ export function HomePage() {
         padding="xl"
       >
         <AboutContent
-          image="/images/leeseunglab/test-homepage.jpg"
+          image="/images/leeseunglab/test-homepage.png"
           imageAlt="Terrer Lab"
           title={t('home.about.title')}
           description={t('home.about.description')}
@@ -56,11 +62,10 @@ export function HomePage() {
         id="research"
         title={t('home.research.title')}
         subtitle={t('home.research.subtitle')}
-        columns={2}
+        columns={1}
         customGap={40}
         background="white"
         padding="xl"
-        containerMaxWidth={1153}
       >
         {translatedResearchThemes.map((theme, index) => (
           <ResearchCard
@@ -93,14 +98,20 @@ export function HomePage() {
           </div>
           <Spacer size="2xl" />
 
-          {/* Questions Grid - 1 col mobile, 2 col md, 4 col lg */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+          {/* Questions List with Arrows */}
+          <div className="flex flex-col items-center w-full max-w-6xl">
             {translatedQuestions.map((question, index) => (
-              <BigQuestionCard
-                key={question.id}
-                {...question}
-                index={index}
-              />
+              <div key={question.id} className="w-full">
+                <BigQuestionCard
+                  {...question}
+                  index={index}
+                />
+                {index < translatedQuestions.length - 1 && (
+                  <div className="flex justify-center py-6">
+                    <ChevronDown size={32} className="text-gray-400" strokeWidth={2} />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>

@@ -12,7 +12,7 @@ export function ResearchGroupPage() {
   return (
     <DetailPageLayout
       title={t('researchGroup.pageTitle')}
-      heroImage="/images/leeseunglab/people-hero.jpg"
+      heroImage="/images/leeseunglab/people-hero.png"
     >
       <ContentSection background="white" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <Container maxWidth="none" className="max-w-[900px]">

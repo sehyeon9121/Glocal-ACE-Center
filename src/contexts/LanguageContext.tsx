@@ -31,25 +31,43 @@ const translations: Record<Language, Record<string, string>> = {
     'home.hero.description': 'Acting for the Planet, Innovating Technology for Timber.',
     // Home Page - About
     'home.about.title': ' Lab',
-    'home.about.description': 'ACT Lab is a research institute exploring new possibilities for large-span timber structures through the integration of artificial intelligence and architectural engineering. By extending the inherent potential of timber through intelligent design and data-driven technologies, we aim to achieve both structural reliability and environmental responsibility. Moving beyond conceptual design studies, our research focuses on analysis and validation grounded in real-world building conditions, advancing carbon-neutral architecture from theory to a practical and viable choice.',
+    'home.about.description': 'Glocal ACE Center Lab is a research institute exploring new possibilities for large-span timber structures through the integration of artificial intelligence and architectural engineering. By extending the inherent potential of timber through intelligent design and data-driven technologies, we aim to achieve both structural reliability and environmental responsibility. Moving beyond conceptual design studies, our research focuses on analysis and validation grounded in real-world building conditions, advancing carbon-neutral architecture from theory to a practical and viable choice.',
     'home.research.title': 'Research Topics',
     'home.research.subtitle': 'Research for the Future',
     'home.bigQuestions.title': 'Core Research Structure',
     'home.bigQuestions.subtitle': 'Research Projects',
-    'home.bigQuestions.q1': 'Development of 200-Meter-Class Carbon-Neutral Large-Span Timber Architecture Technologies',
-    'home.bigQuestions.q2': '[Subtask 1] Development of High-Performance Hybrid Large-Section Timber Structural Technologies',
-    'home.bigQuestions.q3': '[Subtask 2] Development of OSC-Based Modularization and Carbon-Neutral Design Technologies for Large-Span Timber Structures',
-    'home.bigQuestions.q4': '[Subtask 3] Development of Environmental and Energy Performance Evaluation Technologies for Large-Span Timber Buildings',
+    'home.bigQuestions.q1': 'Phase 1: Foundation Building & Core Technology Development (2026~2028)',
+    'home.bigQuestions.q2': 'Phase 2: Technology Advancement & Demonstration Research (2029~2031)',
+    'home.bigQuestions.q3': 'Phase 3: Technology Expansion & Global Standardization (2032~2034)',
+    'home.bigQuestions.q4': 'Phase 4: Sustainable Operation & Future Vision (2035~)',
     'home.bigQuestions.q5': '[Subtask 4] Development of Smart Construction and Maintenance Technologies for Large-Span Timber Buildings',
     'home.bigQuestions.q6': 'Academic Research Partners',
     'home.bigQuestions.q7': 'Research, Testing, and Demonstration Partners?',
     'home.bigQuestions.q8': 'Industry Partners for Technology Transfer and Dissemination',
+
+    // Greeting Page
+    'greeting.pageTitle': 'Greeting',
+    'greeting.title': 'Welcome to Glocal ACE Center',
+    'greeting.paragraph1': 'Welcome to the AI-based Glocal Carbon-Neutral ACE Research Center. Our institute conducts research on sustainable architecture and future technology innovation based on AI technology and carbon-neutral solutions.',
+    'greeting.paragraph2': 'Starting from local foundations, we aim to become a glocal research hub that establishes global standards. Through convergence research across materials science, chemical engineering, and building systems, we develop next-generation sustainable technologies.',
+    'greeting.paragraph3': 'We will continue to strive to lead the way toward a carbon-neutral future through continuous research and innovation. Thank you for your interest and support.',
+    'greeting.signature': 'Glocal ACE Center Director',
+    'greeting.backToHome': 'Back to Home',
+    'greeting.readMore': 'Read More',
+    'greeting.card1.title': 'AI',
+    'greeting.card1.description': 'Leading intelligent design and structural optimization through cutting-edge artificial intelligence technologies.',
+    'greeting.card2.title': 'Carbon-neutral',
+    'greeting.card2.description': 'Innovating low-carbon systems and energy solutions to realize carbon neutrality across building lifecycles.',
+    'greeting.card3.title': 'Excellence',
+    'greeting.card3.description': 'Establishing global standards from local industrial infrastructure through expandable glocal research.',
 
     // Research Themes
     'research.terrestrialCarbon.title': 'AI-Based Design of Large-Span Timber Structures',
     'research.terrestrialCarbon.description': 'Through AI- and data-driven design approaches, we extend the structural limits of large-span timber systems. By integrally analyzing load transfer mechanisms, material efficiency, and geometric optimization, our research advances next-generation timber structural design methods that enhance both stability and performance.',
     'research.naturalClimate.title': 'Technologies for Realizing Carbon-Neutral Architecture',
     'research.naturalClimate.description': 'We quantitatively analyze the carbon reduction potential of timber construction and evaluate carbon-neutral performance across the entire building lifecycle, including design, construction, and operation. Through AI-based analysis and simulation, we present implementable technologies that enable carbon-neutral architecture in real-world applications.',
+    'research.smartEnergy.title': 'Smart Energy & Advanced Materials',
+    'research.smartEnergy.description': 'We integrate smart polymer-based energy harvesting, advanced catalytic systems, and AI-driven building energy management to develop next-generation sustainable technologies. Our interdisciplinary approach bridges materials science, chemical engineering, and building systems for carbon-neutral energy solutions.',
 
     // Research Page
     'research.title': 'Research',
@@ -63,7 +81,7 @@ const translations: Record<Language, Record<string, string>> = {
     'bigQuestions.title': 'Research Projects',
     'bigQuestions.subtitle': 'Structure of research projects within a national government–funded research program.',
     'bigQuestions.intro': 'Our research is driven by fundamental questions regarding the feasibility of 200-meter-class large-span timber buildings and the future of carbon-neutral construction technologies. These questions define an integrated research direction encompassing structural systems, modular design, environmental and energy performance, as well as construction and maintenance technologies.',
-    'bigQuestions.backTo': 'Back to Big Questions',
+    'bigQuestions.backTo': 'Back to Home',
 
     // Publications Page
     'publications.title': 'Publications',
@@ -78,7 +96,7 @@ const translations: Record<Language, Record<string, string>> = {
     'people.researchAssistants': 'Research Assistants',
 
     // Team Page
-    'team.title': 'Introducing ACT Lab',
+    'team.title': 'Introducing Glocal ACE Center',
     'team.team': 'Team',
     'team.alumni': 'Undergraduate Student',
 
@@ -88,7 +106,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Join Us Page
     'joinUs.title': 'Join Us',
-    'joinUs.subtitle': 'ACT LAB',
+    'joinUs.subtitle': 'GLOCAL ACE CENTER',
     'joinUs.values': 'VALUES',
     'joinUs.valuesIntro': 'In science, inclusion begins with inclusion in the research environment.',
     'joinUs.valuesDescription': 'At ACT Institute, research begins with mindset before it becomes technology. The challenges of climate change and carbon neutrality cannot be addressed through a single solution, and we believe that diverse perspectives and backgrounds are essential resources for solving structural problems. Through collaboration that transcends disciplinary boundaries, roles, and levels of experience, ACT Institute explores new possibilities for large-span timber structures.',
@@ -148,29 +166,46 @@ const translations: Record<Language, Record<string, string>> = {
     // Home Page - Hero
     'home.hero.subtitle': 'Glocal ACE Center',
     'home.hero.title': 'AI 기반 글로컬 탄소중립 ACE 센터',
-    'home.hero.description': '지속가능한 미래를 위한 AI 기반 탄소중립 솔루션.',
+    'home.hero.description': 'AI로 열어가는 탄소중립의 미래, 중부권에서 세계를 잇는 글로컬 혁신 거점',
     // Home Page - About
     'home.about.title': 'Glocal ACE Center',
-    'home.about.description': 'Glocal ACE Center는 AI 기반 설계·해석·최적화 기술을 바탕으로, 탄소중립 건축 실현을 위한 목조건축, 저탄소 구조시스템, 건축물 전과정 탄소평가, 친환경 에너지 및 스마트건설 기술을 연구하는 융합형 연구센터입니다. 지역의 산업·환경 특성을 반영한 실증 연구를 통해 글로컬 탄소중립 건축의 새로운 해법을 제시합니다.',
+    'home.about.description': 'AI 기반 글로컬 탄소중립 ACE 연구소에 오신 것을 환영합니다. 우리 연구소는 AI 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 지역에서 시작해 글로벌 표준으로 확장되는 글로컬 연구 거점으로 나아가고자 합니다.',
     'home.research.title': '연구 주제',
     'home.research.subtitle': '미래를 위한 연구',
-    'home.bigQuestions.title': '핵심 연구 구성',
-    'home.bigQuestions.subtitle': '연구 과제',
-    'home.bigQuestions.q1': '탄소제로 목조 대공간 건축물 기술 개발',
-    'home.bigQuestions.q2': '[1세부] 고성능 하이브리드 대단면 목조 구조 기술 개발',
-    'home.bigQuestions.q3': '[2세부] OSC 기반 목조 대공간 모듈화·탄소중립 설계 기술 개발',
-    'home.bigQuestions.q4': '[3세부] 목조 대공간 건축물 친환경·에너지 성능 평가 기술 개발',
+    'home.bigQuestions.title': 'AI 기술로 실현하는 글로컬 탄소중립 건축의 표준화 및 세계화',
+    'home.bigQuestions.subtitle': '중장기 연구 로드맵',
+    'home.bigQuestions.q1': '1단계: 기초 구축 및 핵심기술 확보 (2026~2028)',
+    'home.bigQuestions.q2': '2단계: 기술 고도화 및 실증 연구 (2029~2031)',
+    'home.bigQuestions.q3': '3단계: 기술 확산 및 글로벌 표준화 (2032~2034)',
+    'home.bigQuestions.q4': '4단계: 지속가능 운영 및 미래 비전 (2035~)',
     'home.bigQuestions.q5': '[4세부] 목조 대공간 건축물 스마트 시공 및 유지관리 기술 개발',
     'home.bigQuestions.q6': '학술 공동 연구 기관',
     'home.bigQuestions.q7': '연구·시험·실증 협력 기관',
     'home.bigQuestions.q8': '산업 연계 및 기술 확산 파트너',
 
-    // Research Themes
-    'research.terrestrialCarbon.title': 'AI 기반 대공간 목구조 설계',
-    'research.terrestrialCarbon.description': 'AI와 데이터 기반 설계를 통해 대공간 목구조의 구조적 한계를 확장합니다. 하중 전달, 재료 효율, 형상 최적화를 통합적으로 분석하여 안정성과 성능을 동시에 만족하는 차세대 목조 대공간 설계 해법을 연구합니다.',
-    'research.naturalClimate.title': '탄소중립 건축 실현 기술',
-    'research.naturalClimate.description': '목재 건축의 탄소 저감 효과를 정량적으로 분석하고, 설계·시공·운영 전 과정에서 탄소중립 성능을 검증합니다. AI 기반 분석과 시뮬레이션을 통해 실현 가능한 탄소중립 건축 기술을 제시합니다. ',
+    // Greeting Page
+    'greeting.pageTitle': '인삿말',
+    'greeting.title': 'Glocal ACE Center에 오신 것을 환영합니다',
+    'greeting.paragraph1': 'AI 기반 글로컬 탄소중립 ACE 연구소 홈페이지를 방문해 주신 여러분을 진심으로 환영합니다.',
+    'greeting.paragraph2': '오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 인공지능(AI)이 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 연구소는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 안전과 구조의 가치를 계승하고, 이를 AI 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
+    'greeting.paragraph3': '우리 연구소의 이름인 ACE는 AI(인공지능), Carbon-neutral(탄소중립), 그리고 Excellence(수월성)를 의미합니다. 우리는 중부권 지역의 강력한 산업 인프라를 바탕으로 지역 밀착형 혁신 모델을 구축하고(Local), 이를 세계 무대에서 통용되는 글로벌 표준 기술로 승화시키는(Global) 글로컬(Glocal) 연구의 전초기지가 되고자 합니다.',
+    'greeting.signature': 'Glocal ACE Center 센터장 이승재',
+    'greeting.backToHome': '홈으로 돌아가기',
+    'greeting.readMore': '인삿말 더보기',
+    'greeting.card1.title': '첫째',
+    'greeting.card1.description': 'AI 기반의 지능형 기술로 건축과 산업의 새로운 패러다임을 제시하겠습니다.',
+    'greeting.card2.title': '둘째',
+    'greeting.card2.description': '실질적인 탄소 저감을 실현하는 혁신적인 시스템 연구에 매진하겠습니다.',
+    'greeting.card3.title': '셋째',
+    'greeting.card3.description': '지역 사회와 함께 성장하며 글로벌 경쟁력을 갖춘 전문 인력을 양성하겠습니다.',
 
+    // Research Themes
+    'research.terrestrialCarbon.title': 'Advanced AI: 인공지능 기반의 지능형 설계 및 구조 최적화 기술 선도',
+    'research.terrestrialCarbon.description': '인공지능 기술을 활용하여 건축 설계 과정을 지능적으로 개선하고, 구조의 효율성과 성능을 최적화하는 연구를 수행합니다.',
+    'research.naturalClimate.title': 'Carbon-neutral Excellence: 탄소중립 실현을 위한 저탄소 시스템 및 에너지 혁신',
+    'research.naturalClimate.description': '탄소 배출을 최소화하는 저탄소 시스템과 에너지 효율 향상 기술을 통해 탄소중립을 실현하는 연구를 수행합니다.',
+    'research.smartEnergy.title': 'Expandable Glocalism: 지역 산업 인프라를 바탕으로 글로벌 표준을 수립하는 확장성',
+    'research.smartEnergy.description': '지역 산업 인프라를 기반으로 연구 성과를 확장하고, 글로벌 수준의 기술과 표준을 수립하는 연구를 수행합니다.',
     // Research Page
     'research.title': '연구',
     'research.subtitle': '육상 생태계가 전지구적 변화에 어떻게 반응하는지 이해하는 연구를 수행합니다',
@@ -180,10 +215,10 @@ const translations: Record<Language, Record<string, string>> = {
     'research.bigQuestionsSubtitle': '우리 연구를 이끄는 근본적인 질문들',
 
     // Big Questions Page
-    'bigQuestions.title': '연구 과제',
+    'bigQuestions.title': '중장기 연구 로드맵',
     'bigQuestions.subtitle': '국책 연구과제에서의 연구 과제 구성.',
     'bigQuestions.intro': '우리의 연구는 200m급 목조 대공간 건축물의 실현 가능성과 탄소중립 건설 기술의 미래라는 근본적인 질문에 의해 이끌립니다. 이러한 질문들은 구조 시스템, 모듈화 설계, 환경·에너지 성능, 그리고 시공 및 유지관리 기술에 대한 통합적인 연구 방향을 제시합니다.',
-    'bigQuestions.backTo': 'ACT LAB으로 돌아가기',
+    'bigQuestions.backTo': '홈으로 돌아가기',
 
     // Publications Page
     'publications.title': '출판물',
@@ -198,7 +233,7 @@ const translations: Record<Language, Record<string, string>> = {
     'people.researchAssistants': '연구 조교',
 
     // Team Page
-    'team.title': 'ACT LAB을 소개합니다',
+    'team.title': 'GLOCAL ACE CENTER을 소개합니다',
     'team.team': '팀',
     'team.alumni': '학부생',
 
@@ -208,8 +243,8 @@ const translations: Record<Language, Record<string, string>> = {
     
 
     // Join Us Page
-    'joinUs.title': 'ACT INSTITUTE',
-    'joinUs.subtitle': 'ACT Labd의 태도',
+    'joinUs.title': 'GLOCAL ACE CENTER',
+    'joinUs.subtitle': 'GLOCAL ACE CENTER 의 태도',
     'joinUs.values': '가치',
     'joinUs.valuesIntro': '과학에서의 포용은 연구실에서의 포용에서 시작됩니다.',
     'joinUs.valuesDescription': 'ACT Institute의 연구는 구조 기술 이전에 태도에서 시작됩니다. 기후 위기와 탄소 중립이라는 과제는 단일한 해법으로 해결될 수 없으며, 우리는 다양한 관점과 배경이 구조적 문제 해결의 핵심 자원이라고 믿습니다. ACT Institute는 전공, 역할, 경험의 경계를 넘는 협업을 통해 목구조 대공간 기술의 새로운 가능성을 탐구합니다.',
@@ -250,7 +285,7 @@ const translations: Record<Language, Record<string, string>> = {
     'language.korean': '한국어',
 
     // Footer
-    'footer.copyright': '© 2024 ACT Lab. All rights reserved.',
+    'footer.copyright': '© 2024 GLOCAL ACE CENTER. All rights reserved.',
     'footer.contact': '연락처',
     'footer.location': '위치',
   },

@@ -12,10 +12,15 @@ export function ResearchPage() {
   const { t } = useLanguage();
 
   // 번역된 연구 주제 데이터
+  const themeKeyMap: Record<string, string> = {
+    'terrestrial-carbon': 'terrestrialCarbon',
+    'natural-climate': 'naturalClimate',
+    'smart-energy': 'smartEnergy',
+  };
   const translatedResearchThemes = researchThemes.map((theme) => ({
     ...theme,
-    title: t(`research.${theme.id === 'terrestrial-carbon' ? 'terrestrialCarbon' : 'naturalClimate'}.title`),
-    description: t(`research.${theme.id === 'terrestrial-carbon' ? 'terrestrialCarbon' : 'naturalClimate'}.description`),
+    title: t(`research.${themeKeyMap[theme.id]}.title`),
+    description: t(`research.${themeKeyMap[theme.id]}.description`),
   }));
 
   // 번역된 Big Questions 데이터
@@ -41,7 +46,7 @@ export function ResearchPage() {
       {/* Research Themes */}
       <GridSection
         title={t('research.themesTitle')}
-        columns={2}
+        columns={1}
         gap="lg"
         background="light"
         padding="lg"

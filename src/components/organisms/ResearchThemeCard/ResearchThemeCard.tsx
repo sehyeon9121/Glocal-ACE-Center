@@ -41,7 +41,7 @@ export function ResearchThemeCard({
 
         <Spacer size="md" />
 
-        <Paragraph color="light" size="md" className="leading-relaxed">
+        <Paragraph color="light" size="md" className="leading-relaxed text-center">
           {description}
         </Paragraph>
 

@@ -19,4 +19,13 @@ export const researchThemes: ResearchTheme[] = [
     expandIcon: '/images/leeseunglab/down_green.png',
     collapseIcon: '/images/leeseunglab/up_green.png',
   },
+  {
+    id: 'smart-energy',
+    title: 'Smart Energy & Advanced Materials',
+    description: 'We integrate smart polymer-based energy harvesting, advanced catalytic systems, and AI-driven building energy management to develop next-generation sustainable technologies. Our interdisciplinary approach bridges materials science, chemical engineering, and building systems for carbon-neutral energy solutions.',
+    href: '#',
+    backgroundImage: '/images/leeseunglab/cldldldld.png',
+    expandIcon: '/images/leeseunglab/down_green.png',
+    collapseIcon: '/images/leeseunglab/up_green.png',
+  },
 ];

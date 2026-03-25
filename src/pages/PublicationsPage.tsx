@@ -1,114 +1,223 @@
-import { useMemo } from 'react';
-import { useParams } from 'react-router-dom';
+import { useMemo, useState } from 'react';
 import { DetailPageLayout } from '@/components/templates/DetailPageLayout';
 import { ContentSection } from '@/components/templates/ContentSection';
-import { PublicationYearSection } from '@/components/organisms/PublicationYearSection';
 import { Container } from '@/components/atoms/Container';
-import { publicationData, type PublicationCategory } from '@/data/publicationData';
+import { researchGroups } from '@/data/researchGroupData';
+import type { PaperEntry } from '@/data/researchGroupData';
 import { useLanguage } from '@/contexts/LanguageContext';
-import type { Publication } from '@/types';
 
-// URL slug를 실제 카테고리 값으로 변환하는 매핑
-const slugToCategoryMap: Record<string, PublicationCategory> = {
-  'scie': 'SCIE',
-  'kci': 'KCI',
-  'international-conference': 'International Conference',
-  'domestic-conference': 'Domestic Conference',
-  'scopus': 'SCOPUS',
-};
+const ITEMS_PER_PAGE = 20;
 
-// 카테고리별 표시 이름
-const categoryDisplayNames: Record<PublicationCategory, string> = {
-  'SCIE': 'SCIE',
-  'KCI': 'KCI',
-  'International Conference': 'International Conference',
-  'Domestic Conference': 'Domestic Conference',
-  'SCOPUS': 'SCOPUS',
-};
+/** 확장된 논문 타입: 연구원 이름과 연도 포함 */
+interface ExtendedPaper extends PaperEntry {
+  researcherName: string;
+  year: number;
+}
+
+/** journal 문자열에서 연도를 추출 (예: "(2025," → 2025) */
+function extractYear(journal: string): number {
+  const match = journal.match(/\((\d{4})/);
+  return match ? parseInt(match[1], 10) : 0;
+}
 
 export function PublicationsPage() {
   const { t } = useLanguage();
-  const { category: categorySlug } = useParams<{ category?: string }>();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedResearcher, setSelectedResearcher] = useState('All');
+  const [selectedYear, setSelectedYear] = useState('All');
 
-  // 필터링 및 정렬된 데이터를 연도별로 그룹화
-  const publicationsByYear = useMemo(() => {
-    // 카테고리 매핑
-    const targetCategory = categorySlug ? slugToCategoryMap[categorySlug] : undefined;
+  // 모든 연구원의 selectedPapers를 모으고, researcherName·year 태깅 후 중복 제거
+  const allPapers = useMemo(() => {
+    const tagged: ExtendedPaper[] = researchGroups
+      .flatMap((group) => group.members)
+      .flatMap((member) =>
+        (member.selectedPapers ?? []).map((paper) => ({
+          ...paper,
+          researcherName: member.name,
+          year: extractYear(paper.journal),
+        }))
+      );
 
-    // 필터링 (카테고리가 없으면 전체 데이터)
-    const filteredData = targetCategory
-      ? publicationData.filter((pub) => pub.category === targetCategory)
-      : publicationData;
-
-    // PublicationData를 Publication 타입으로 변환
-    const convertedData: Publication[] = filteredData.map((pub) => ({
-      id: pub.id,
-      year: parseInt(pub.year, 10),
-      authors: pub.authors,
-      title: pub.title,
-      journal: pub.volume && pub.pages
-        ? `${pub.journal}, ${pub.volume}, ${pub.pages}`
-        : pub.volume
-        ? `${pub.journal}, ${pub.volume}`
-        : pub.journal,
-      link: pub.link || pub.doi,
-    }));
-
-    // year 기준 내림차순 정렬
-    const sortedData = convertedData.sort((a, b) => b.year - a.year);
-
-    // 연도별 그룹화
-    const groupedByYear = sortedData.reduce<Record<number, Publication[]>>((acc, pub) => {
-      if (!acc[pub.year]) {
-        acc[pub.year] = [];
+    // title 기준 중복 제거
+    const seen = new Set<string>();
+    const unique: ExtendedPaper[] = [];
+    for (const paper of tagged) {
+      if (!seen.has(paper.title)) {
+        seen.add(paper.title);
+        unique.push(paper);
       }
-      acc[pub.year].push(pub);
-      return acc;
-    }, {});
-
-    // 연도 내림차순으로 정렬된 배열로 변환
-    return Object.entries(groupedByYear)
-      .map(([year, publications]) => ({
-        year: parseInt(year, 10),
-        publications,
-      }))
-      .sort((a, b) => b.year - a.year);
-  }, [categorySlug]);
-
-  // 동적 타이틀 생성
-  const pageTitle = useMemo(() => {
-    if (!categorySlug) {
-      return t('publications.title');
     }
-    const category = slugToCategoryMap[categorySlug];
-    if (category) {
-      return `${t('publications.title')} > ${categoryDisplayNames[category]}`;
-    }
-    return t('publications.title');
-  }, [categorySlug, t]);
+
+    return unique.sort((a, b) => b.year - a.year);
+  }, []);
+
+  // 필터 옵션 목록 추출
+  const researcherOptions = useMemo(() => {
+    const names = [...new Set(allPapers.map((p) => p.researcherName))];
+    return names.sort();
+  }, [allPapers]);
+
+  const yearOptions = useMemo(() => {
+    const years = [...new Set(allPapers.map((p) => p.year).filter((y) => y > 0))];
+    return years.sort((a, b) => b - a);
+  }, [allPapers]);
+
+  // 검색어 + 연구원 + 연도 필터 적용
+  const filteredPapers = useMemo(() => {
+    const term = searchTerm.toLowerCase();
+    return allPapers.filter((paper) => {
+      const matchesSearch =
+        !term ||
+        paper.title.toLowerCase().includes(term) ||
+        paper.authors.toLowerCase().includes(term);
+      const matchesResearcher =
+        selectedResearcher === 'All' || paper.researcherName === selectedResearcher;
+      const matchesYear =
+        selectedYear === 'All' || paper.year === parseInt(selectedYear, 10);
+      return matchesSearch && matchesResearcher && matchesYear;
+    });
+  }, [allPapers, searchTerm, selectedResearcher, selectedYear]);
+
+  // 필터 변경 시 페이지 1로 리셋
+  const totalPages = Math.ceil(filteredPapers.length / ITEMS_PER_PAGE);
+  const safePage = Math.min(currentPage, totalPages || 1);
+  const startIndex = (safePage - 1) * ITEMS_PER_PAGE;
+  const currentPapers = filteredPapers.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchTerm(value);
+    setCurrentPage(1);
+  };
+
+  const handleResearcherChange = (value: string) => {
+    setSelectedResearcher(value);
+    setCurrentPage(1);
+  };
+
+  const handleYearChange = (value: string) => {
+    setSelectedYear(value);
+    setCurrentPage(1);
+  };
 
   return (
     <DetailPageLayout
-      title={pageTitle}
+      title={t('publications.title')}
       subtitle={t('publications.subtitle')}
-      heroImage="/images/leeseunglab/publications-hero.jpg"
+      heroImage="/images/leeseunglab/people-hero.png"
     >
       <div style={{ height: 60 }} />
       <ContentSection background="white" padding="lg">
         <Container maxWidth="none" className="max-w-[920px]">
-          {publicationsByYear.length > 0 ? (
-            publicationsByYear.map(({ year, publications: pubs }, groupIndex) => (
-              <PublicationYearSection
-                key={year}
-                year={year}
-                publications={pubs}
-                style={groupIndex > 0 ? { marginTop: 30 } : undefined}
-                baseIndex={groupIndex * 10}
-              />
-            ))
+          {/* Search & Filter */}
+          <div className="flex flex-col md:flex-row gap-4 mb-16 p-6 bg-gray-50 rounded-2xl border border-gray-200 shadow-sm">
+            <input
+              type="text"
+              placeholder="Search by title or author..."
+              value={searchTerm}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              className="flex-1 px-5 py-6 rounded-xl border border-gray-300 text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-[Inter,Pretendard,sans-serif]"
+            />
+            <select
+              value={selectedResearcher}
+              onChange={(e) => handleResearcherChange(e.target.value)}
+              className="px-5 py-3.5 rounded-xl border border-gray-300 text-base min-w-[200px] bg-white focus:ring-2 focus:ring-blue-500 outline-none font-[Inter,Pretendard,sans-serif]"
+            >
+              <option value="All">All Researchers</option>
+              {researcherOptions.map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+            <select
+              value={selectedYear}
+              onChange={(e) => handleYearChange(e.target.value)}
+              className="px-5 py-3.5 rounded-xl border border-gray-300 text-base min-w-[150px] bg-white focus:ring-2 focus:ring-blue-500 outline-none font-[Inter,Pretendard,sans-serif]"
+            >
+              <option value="All">All Years</option>
+              {yearOptions.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <h3 className="text-4xl font-extrabold text-gray-800 mt-12 mb-2 font-[Inter,Pretendard,sans-serif]">
+            Publication
+          </h3>
+          <hr className="border-gray-300 mb-8" />
+
+          {currentPapers.length > 0 ? (
+            <>
+              <ul className="divide-y divide-gray-200">
+                {currentPapers.map((paper, i) => (
+                  <li key={i} className="py-6 flex gap-4">
+                    <span className="text-gray-400 font-bold flex-shrink-0 font-[Inter,Pretendard,sans-serif]">
+                      {startIndex + i + 1}.
+                    </span>
+                    <div>
+                      <p className="text-lg font-bold text-gray-900 mb-2 font-[Inter,Pretendard,sans-serif]">
+                        {paper.title}
+                      </p>
+                      <p className="text-base text-gray-600 font-[Inter,Pretendard,sans-serif]">
+                        {paper.authors}
+                      </p>
+                      <p className="text-base text-gray-600 italic font-[Inter,Pretendard,sans-serif]">
+                        {paper.journal}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex justify-center items-center gap-2 mt-10">
+                  <button
+                    type="button"
+                    onClick={() => goToPage(safePage - 1)}
+                    disabled={safePage === 1}
+                    className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 disabled:text-gray-300 disabled:cursor-not-allowed font-[Inter,Pretendard,sans-serif]"
+                  >
+                    ← Prev
+                  </button>
+
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      type="button"
+                      onClick={() => goToPage(page)}
+                      className={`w-9 h-9 rounded text-sm font-semibold transition-colors font-[Inter,Pretendard,sans-serif] ${
+                        page === safePage
+                          ? 'bg-gray-200 text-black'
+                          : 'text-gray-600 hover:bg-gray-100'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+
+                  <button
+                    type="button"
+                    onClick={() => goToPage(safePage + 1)}
+                    disabled={safePage === totalPages}
+                    className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 disabled:text-gray-300 disabled:cursor-not-allowed font-[Inter,Pretendard,sans-serif]"
+                  >
+                    Next →
+                  </button>
+                </div>
+              )}
+            </>
           ) : (
-            <div className="text-center py-12 text-gray-500">
-              {t('publications.noResults') || 'No publications found.'}
+            <div className="text-center py-12 text-gray-500 font-[Inter,Pretendard,sans-serif]">
+              검색 결과가 없습니다.
             </div>
           )}
           <div style={{ height: 60 }} />

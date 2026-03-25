@@ -11,7 +11,7 @@ export function TeamPage() {
   return (
     <DetailPageLayout
       title={t('team.title')}
-      heroImage="/images/leeseunglab/people-hero.jpg"
+      heroImage="/images/leeseunglab/people-hero.png"
     >
       {/* Organization Chart Section */}
       <ContentSection background="light" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>

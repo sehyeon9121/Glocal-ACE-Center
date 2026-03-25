@@ -154,9 +154,10 @@ export function NavigationBar({ className }: NavigationBarProps) {
             />
           ))}
 
-          <DropdownMenu
+          <NavLink
+            href="/publications"
             label={t('nav.publications')}
-            items={publicationsDropdownItems}
+            className="text-[var(--color-text)] hover:text-[var(--color-primary)]"
           />
 
           <DropdownMenu
@@ -224,50 +225,17 @@ export function NavigationBar({ className }: NavigationBarProps) {
                 </Link>
               ))}
 
-              {/* Publications Accordion */}
-              <div>
-                <button
-                  type="button"
-                  onClick={() => toggleSubmenu('publications')}
-                  className="flex items-center justify-between w-full h-12 hover:bg-gray-50 transition-colors"
-                  style={{ paddingLeft: '20px', paddingRight: '20px' }}
-                >
-                  <Text size="sm" weight={500} color="text">
-                    {t('nav.publications')}
-                  </Text>
-                  <motion.div
-                    animate={{ rotate: expandedMenu === 'publications' ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Icon name="ChevronDown" size="sm" color="text" />
-                  </motion.div>
-                </button>
-                <AnimatePresence>
-                  {expandedMenu === 'publications' && (
-                    <motion.div
-                      variants={submenuVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="hidden"
-                      className="overflow-hidden bg-gray-50"
-                    >
-                      {publicationsDropdownItems.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center h-11 hover:bg-gray-100 transition-colors"
-                          style={{ paddingLeft: '40px', paddingRight: '20px' }}
-                          onClick={handleNavClick}
-                        >
-                          <Text size="sm" weight={500} color="text">
-                            {item.label}
-                          </Text>
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              {/* Publications Link */}
+              <Link
+                href="/publications"
+                className="flex items-center h-12 hover:bg-gray-50 transition-colors"
+                style={{ paddingLeft: '20px', paddingRight: '20px' }}
+                onClick={handleNavClick}
+              >
+                <Text size="sm" weight={500} color="text">
+                  {t('nav.publications')}
+                </Text>
+              </Link>
 
               {/* People Accordion */}
               <div>

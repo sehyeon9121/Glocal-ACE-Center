@@ -3,6 +3,12 @@
  * Division별 그룹 구조
  */
 
+export interface PaperEntry {
+  title: string;
+  authors: string;
+  journal: string;
+}
+
 export interface ResearcherProfile {
   name: string;
   degree: string;
@@ -12,7 +18,7 @@ export interface ResearcherProfile {
   website?: string;
   history: string[];
   introduction: string;
-  selectedPapers?: string[];
+  selectedPapers?: PaperEntry[];
 }
 
 export interface ResearchGroup {
@@ -23,30 +29,132 @@ export interface ResearchGroup {
 
 export const researchGroups: ResearchGroup[] = [
   {
-    groupName: 'A Division (AI-Based Carbon Neutral Design)',
+    groupName: 'Ai Division (AI-Based Carbon Neutral Design)',
     color: '#22C55E',
     members: [
       {
         name: 'Lee, Seung-Jae',
         degree: 'Ph.D., The University of Tokyo',
         affiliation: 'Professor, Korea University of Technology and Education',
-        email: 'hong-a1@koreatech.ac.kr',
-        website: 'https://example.com',
+        email: 'leeseung@koreatech.ac.kr',
+        website: 'https://www.koreatech.ac.kr/faculty/view.es?mid=b30103010100&division=1&classification=DEPF006&seq=144',
         image: '/images/leeseunglab/Lee.jpg',
         history: [
-          '연성 막 개폐 구동장치 및 제어시스템 개발',
-          '스마트센서 및 드론 기반 구조물 점검 기술',
-          '고층 모듈러 구조시스템 접합부 해석 및 실험',
-          '비정형 구조물 태양광 최적배치 프로그램 개발',
-          '친환경 재생목재 내진구조 시스템 개발',
+          
         ],
         introduction:
-          'AI 기반 최적화 설계와 목구조 구조시스템, 친환경 구조설계를 중심으로 지속가능 건축기술을 연구합니다.',
+          'Professor Seung-Jae Lee received his M.S. and Ph.D. in Architectural Engineering from the University of Tokyo, specializing in structural engineering. His research focuses on earthquake-resistant structures and AI-based structural design to enhance the safety and performance of buildings. He has actively contributed to academia and industry through award-winning research and practical applications in structural engineering.',
         selectedPapers: [
-          'Existence and uniqueness of a weak solution of an extensible beam on a moving domain. Ha, J., Kim, D., & Shon, S. Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          'AI-based structural optimization for carbon reduction in building materials. Lee, S., & Kim, T. Building and Environment, 150, 112-125 (2024).',
-          'Performance-based seismic design of timber-concrete composite structures. Park, S., & Kwak, B. Engineering Structures, 210, 110-120 (2024).',
-        ],
+  {
+    title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
+    authors: 'Ha, J.; Kim, D.; Shon, S.',
+    journal: 'Journal of the Korean Mathematical Society (2025, 62(2), 327-344)',
+  },
+  {
+    title: 'Index-Based Neural Network Framework for Truss Structural Analysis via a Mechanics-Informed Augmented Lagrangian Approach',
+    authors: 'Ha, H.; Shon, S.; Lee, S.',
+    journal: 'Buildings (2025, 15(10), 1753)',
+  },
+  {
+    title: 'Domain-Separated Quantum Neural Network for Truss Structural Analysis with Mechanics-Informed Constraints',
+    authors: 'Ha, H.; Shon, S.; Lee, S.',
+    journal: 'Biomimetics (2025, 10(6), 407)',
+  },
+  {
+    title: 'Improved convergence performance of advanced crow search algorithm and application to optimal design of large-scale truss dome structures',
+    authors: 'Lee, D.; Kim, H.; Kim, J.; Lee, S.',
+    journal: 'Journal of Asian Architecture and Building Engineering (2025, 24(6), 5435-5450)',
+  },
+  {
+    title: 'The Optimal Cost Design of Reinforced Concrete Beams Using an Artificial Neural Network—The Effectiveness of Cost-Optimized Training Data',
+    authors: 'So, J.; Lee, S.; Seong, J.; Lee, D.',
+    journal: 'Buildings (2025, 15(9), 1577)',
+  },
+  {
+    title: 'Comparative Study on Hyperparameter Tuning for Predicting Concrete Compressive Strength',
+    authors: 'Kim, J.; Lee, D.',
+    journal: 'Buildings (2025, 15(13), 2173)',
+  },
+  {
+    title: 'Performance improvement of seismic response prediction using the lstm-pinn hybrid method',
+    authors: 'Kim, S.; Lee, D.; Lee, S.',
+    journal: 'Biomimetics (2025, 10(8), 490)',
+  },
+  {
+    title: 'Efficient hyperparameter optimization using metaheuristics for machine learning in truss steel structure cross-section prediction',
+    authors: 'Lee, D.; Noh, S.; Kim, J.; Lee, S.',
+    journal: 'Buildings (2025, 15(15), 2791)',
+  },
+
+  {
+    title: 'Dynamic analysis of extensible beam with multiple cracks',
+    authors: 'Shon, S.; Ha, J.; Gutman, S.',
+    journal: 'Journal of Low Frequency Noise, Vibration and Active Control (2024, 43(4), 1397-1423)',
+  },
+  {
+    title: 'Investigating the effect of elevated temperatures on the utilization of demolished paving block powders as supplementary cementitious materials',
+    authors: 'Kim, J.; Lee, D.; Ubysz, A.',
+    journal: 'Revista de la construcción (2024, 23(1), 151-163)',
+  },
+  {
+    title: 'Optimal Design of Truss Structures for Sustainable Carbon Emission Reduction in Korean Construction',
+    authors: 'Lee, D.; Kim, J.; Lee, S.',
+    journal: 'Sustainability (2024, 16(14), 5830)',
+  },
+  {
+    title: 'Comparative analysis of cement grade and cement strength as input features for machine learning-based concrete strength prediction',
+    authors: 'Kim, J.; Lee, D.; Ubysz, A.',
+    journal: 'Case Studies in Construction Materials (2024, 21, e03557)',
+  },
+  {
+    title: 'Optimal Design of Formulas for a Single Degree of Freedom Tuned Mass Damper Parameter Using a Genetic Algorithm and H2 Norm',
+    authors: 'Kim, S.; Lee, D.; Lee, S.',
+    journal: 'Biomimetics (2024, 9(8), 450)',
+  },
+
+  {
+    title: 'An advanced crow search algorithm for solving global optimization problem',
+    authors: 'Lee, D.; Kim, J.; Shon, S.; Lee, S.',
+    journal: 'Applied Sciences (2023, 13(11), 6628)',
+  },
+  {
+    title: 'Size and topology optimization of truss structures using quantum-based HS algorithm',
+    authors: 'Lee, D.; Shon, S.; Lee, S.; Ha, J.',
+    journal: 'Buildings (2023, 13(6), 1436)',
+  },
+  {
+    title: 'Weight Optimization of Discrete Truss Structures Using Quantum-Based HS Algorithm',
+    authors: 'Lee, S.; Ha, J.; Shon, S.; Lee, D.',
+    journal: 'Buildings (2023, 13(9), 2132)',
+  },
+  {
+    title: 'Qubit Adoption Method of a Quantum Computing-Based Metaheuristics Algorithm for Truss Structures Analysis',
+    authors: 'Lee, D.; Lee, S.; Shon, S.',
+    journal: 'Biomimetics (2023, 9(1))',
+  },
+  {
+    title: 'Utilization of different forms of demolished clay brick and granite wastes for better performance in cement composites',
+    authors: 'Kim, J.; Lee, D.; Sičáková, A.; Kim, N.',
+    journal: 'Buildings (2023, 13(1), 165)',
+  },
+
+  {
+    title: 'Variational setting for cracked beams and shallow arches',
+    authors: 'Gutman, S.; Ha, J.; Shon, S.',
+    journal: 'Archive of Applied Mechanics (2022, 92(7), 2225-2236)',
+  },
+  {
+    title: 'Dynamic behavior of cracked beams and shallow arches',
+    authors: 'Gutman, S.; Ha, J.; Shon, S.',
+    journal: 'Journal of the Korean Mathematical Society (2022, 59(5), 869-890)',
+  },
+
+  {
+    title: 'Estimation algorithm for physical parameters in a shallow arch',
+    authors: 'Gutman, S.; Ha, J.; Shon, S.',
+    journal: 'Journal of the Korean Mathematical Society (2021, 58(3), 723-740)',
+  }
+]
       },
       {
         name: 'Lee, Jin-Gang',
@@ -62,9 +170,21 @@ export const researchGroups: ResearchGroup[] = [
         introduction:
           'ddddd.',
         selectedPapers: [
-          'Existence and uniqueness of a weak solution of an extensible beam on a moving domain. Ha, J., Kim, D., & Shon, S. Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          'AI-based structural optimization for carbon reduction in building materials. Lee, S., & Kim, T. Building and Environment, 150, 112-125 (2024).',
-          'Performance-based seismic design of timber-concrete composite structures. Park, S., & Kwak, B. Engineering Structures, 210, 110-120 (2024).',
+          {
+            title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
+            authors: 'Ha, J., Kim, D., & Shon, S.',
+            journal: 'Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
+          },
+          {
+            title: 'AI-based structural optimization for carbon reduction in building materials',
+            authors: 'Lee, S., & Kim, T.',
+            journal: 'Building and Environment, 150, 112-125 (2024).',
+          },
+          {
+            title: 'Performance-based seismic design of timber-concrete composite structures',
+            authors: 'Park, S., & Kwak, B.',
+            journal: 'Engineering Structures, 210, 110-120 (2024).',
+          },
         ],
       },
     ],
@@ -77,8 +197,8 @@ export const researchGroups: ResearchGroup[] = [
         name: 'Bae. Jin Woo',
         degree: 'Ph.D., Seoul National University',
         affiliation: 'Associate Professor, Korea University of Technology and Education',
-        email: 'hong-c1@koreatech.ac.kr',
-        website: 'https://example.com',
+        email: 'jwbae@koreatech.ac.kr',
+        website: 'https://sites.google.com/view/hopelab2020/home',
         image: '/images/leeseunglab/Bae Jin.png',
         history: [
           
@@ -86,28 +206,213 @@ export const researchGroups: ResearchGroup[] = [
         introduction:
           'Professor Jin Woo Bae is an Associate Professor in the School of Energy, Materials and Chemical Engineering at the Korea University of Technology and Education (KOREATECH). He earned his Ph.D. from Seoul National University and pursued postdoctoral research at Kyung Hee University as well as the University of California, Berkeley. Before entering academia, he worked as a Senior Engineer at Samsung Display and LG Innotek. He focuses on smart polymers and hybrid materials to drive innovations in next‑generation energy and wearable electronics. His research advances fundamental science while delivering practical solutions with real‑world impact, bridging academic excellence and industrial relevance.',
         selectedPapers: [
-          'Existence and uniqueness of a weak solution of an extensible beam on a moving domain. Ha, J., Kim, D., & Shon, S. Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          'AI-based structural optimization for carbon reduction in building materials. Lee, S., & Kim, T. Building and Environment, 150, 112-125 (2024).',
-          'Performance-based seismic design of timber-concrete composite structures. Park, S., & Kwak, B. Engineering Structures, 210, 110-120 (2024).',
-        ],
+  {
+    title: 'Aromatic Amine-Functionalized graphene oxide enables Proximity-Sensitive triboelectric sensors for intelligent motion tracking and LIB charging',
+    authors: 'Gajula, P.; Woo, I.; Oh, S. J.; Bae, J. W.',
+    journal: 'Advanced Composites and Hybrid Materials (2026, 9:137)',
+  },
+  {
+    title: 'ZnSnO3–Ecoflex/LDH–PU Based Triboelectric Nanogenerator for Motion‐Activated Battery‐Free Smart Street Lighting',
+    authors: 'Ramadasu, G.; Woo, I.; Yoon, J. U.; Gajula, P.; Bae, J. W.',
+    journal: 'Small (2026, e10831)',
+  },
+  {
+    title: 'Voltage-switchable Janus-inspired triboelectric nanogenerator with La-MOF@GO–BaSrTiO₃ hybrids for self-powered smart school bag and directional energy harvesting',
+    authors: 'Gajula, P.; Woo, I.; Bae, J. W.',
+    journal: 'Composites Part B: Engineering (2026, 312, 113329)',
+  },
+  {
+    title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
+    authors: 'Ha, J.; Kim, D.; Choi, S. E.; Oh, S. J.; Yoon, J. M.; Bae, J. W.',
+    journal: 'Small (2026, 22(7), e10593)',
+  },
+
+  {
+    title: 'Triboelectric enhancement via MnO₂-coated graphite for self-powered smart entry systems',
+    authors: 'Ramadasu, G.; Woo, I.; Yoon, J. U.; Gajula, P.; Bae, J. W.',
+    journal: '(2025, 32, 100710)',
+  },
+  {
+    title: 'Boosting triboelectric performance of PDMS with dual-filler reinforcement for smart touch sensing',
+    authors: 'Ramadasu, G.; Woo, I.; Yoon, J. U.; Oh, S. J.; Gajula, P.; Bae, J. W.',
+    journal: 'Journal of Energy Chemistry (2025, 110, 455-465)',
+  },
+  {
+    title: 'High-performance, transparent, stretchable triboelectric nanogenerator and triboresistive position sensor: Tailoring PVC gel properties via plasticizer modulation',
+    authors: 'Woo, I.; Oh, S. J.; Yoon, J. U.; Bae, J. W.',
+    journal: 'Chemical Engineering Journal (2025, 515, 163747)',
+  },
+  {
+    title: 'Influence of anion in viologen derivatives on the performance of all-in-one plasticized ionogel-based electrochromic devices',
+    authors: 'Oh, S. J.; Kim, H. J.; Choi, S. E.; Yoon, J. M.; Heo, W.; Nah, Y. C.; Bae, J. W.',
+    journal: 'Polymer (2025, 335, 128782)',
+  },
+  {
+    title: 'Enhancing proton exchange membrane fuel cell performance and durability: Role of expanded polytetrafluoroethylene layer thickness in reinforced composite membranes',
+    authors: 'Han, D. H.; Heo, W.; Oh, S. J.; Woo, I.; Yoon, J. U.; Choi, S. E.; Yoon, J. M.; Bae, J. W.',
+    journal: 'Journal of Power Sources (2025, 649, 237425)',
+  },
+  {
+    title: 'Environmentally friendly electroactive poly(vinyl chloride) gel-based focus-tunable microlens',
+    authors: 'Yoon, J. U.; Oh, S. J.; Bae, J. W.',
+    journal: 'Journal of Industrial and Engineering Chemistry (2025, 146, 431-440)',
+  },
+  {
+    title: 'Stretchable polymeric-gel-based sponge with tunable wettability via segmented network design',
+    authors: 'Yoon, H.; Kim, J. H.; Kim, J. Q.; Bae, J. W.; Sohn, E. H.; Kang, H. S.',
+    journal: 'Materials Horizons (2025, 12(15), 5666-5676)',
+  },
+  {
+    title: 'Dual-Plasticized PVC-Gels with High Dissipation Factor for Smart Wearable Thermotherapy and Sensing Devices',
+    authors: 'Choi, S. E.; Oh, S. J.; Yoon, J. M.; Bae, J. W.',
+    journal: 'Advanced Functional Materials (2025, 35(45), 2505873)',
+  },
+  {
+    title: 'Mechanical Properties and Crystallization Behavior of Surface-Treated Waste Phenol Resin-based Polyamide 6 Composites',
+    authors: 'Choi, I. G.; Lee, T. M.; Yang, S. J.; Oh, S. J.; Bae, J. W.; Nam, B. U.',
+    journal: 'POLYMER-KOREA (2025, 49(3), 306-316)',
+  },
+  {
+    title: 'Study on Mechanical and Thermal Properties of Polypropylene-based Composites with Crushed Phenolic Resin Waste and Compatibilizer',
+    authors: 'Yang, S. J.; Choi, I. G.; Lee, T. M.; Bae, J. W.; Nam, B. U.',
+    journal: 'POLYMER-KOREA (2025, 49(3), 317-324)',
+  },
+  {
+    title: 'Reinforcing the Strategy: Enhanced Efficiency of Electrospun PVDF Hybrid Nanocomposites-Based Triboelectric Nanogenerators with p-NiO/n-ZnO Interfaces for Energy Harvesting',
+    authors: 'Venkatesan, H. M.; Yoon, J. U.; Bindhu, A.; Woo, I.; Gajula, P.; Arun, A. P.; Bae, J. W.',
+    journal: 'Advanced Sustainable Systems (2025, 9(8), e00180)',
+  },
+  {
+    title: 'Unveiling the latent potential: Ni/CoFe₂O₄-loaded electrospun PVDF hybrid composite-based triboelectric nanogenerator for mechanical energy harvesting applications',
+    authors: 'Venkatesan, H. M.; Woo, I.; Yoon, J. U.; Gajula, P.; Arun, A. P.; Bae, J. W.',
+    journal: 'Advanced Composites and Hybrid Materials (2025, 8(2), 221)',
+  },
+  {
+    title: 'Harnessing Mechanical Energy for Green Hydrogen: Pioneering High-Performance Triboelectric Nanogenerators',
+    authors: 'Gajula, P.; Yoon, J. U.; Woo, I.; Bae, J. W.',
+    journal: 'Advanced Functional Materials (2025, 35(35), 2501074)',
+  },
+  {
+    title: 'Stretchable Multicolored Electroluminescent Sound Display for Wearable and Interactive Textiles',
+    authors: 'Oh, S. J.; Choi, S. E.; Woo, I.; Yoon, J. U.; Bae, J.; Bae, J. W.',
+    journal: 'Advanced Functional Materials (2025, 35(31), 2420432)',
+  },
+  {
+    title: 'Creating Smart Washable Flooring: Sandwich-Style Single-Electrode Triboelectric Nanogenerator with Barium Titanate and Graphite-Fluorinated Polymer-Infused Ecoflex Hybrid Composites for Enhanced Safety and Security',
+    authors: 'Yoon, J. U.; Woo, I.; Gajula, P.; Bae, J. W.',
+    journal: 'Advanced Functional Materials (2025, 35(24), 2421977)',
+  },
+  {
+    title: 'Impact of Pentaerythritol (Core), Dimethylol Butanoic Acid (Monomer) Based Second Generation Aliphatic Hyperbranched Polymer on the Tribonegative Performance of Polyvinylidene Fluoride',
+    authors: 'Mohan, N. B.; Yoon, J. U.; Bindhu, A.; Woo, I.; Gajula, P.; Arun, A. P.; Bae, J. W.',
+    journal: 'Advanced Sustainable Systems (2025, 9(3), 2400731)',
+  },
+  {
+    title: 'Enhanced Charge Holding Capacity of PVDF Nanofiber Using NiO-CuO Nanoparticles-Based Triboelectric Nanogenerator for Energy and Wearable Electronic Applications',
+    authors: 'Bindhu, A.; Yoon, J. U.; Woo, I.; Gajula, P.; Arun, A. P.; Bae, J. W.',
+    journal: 'Advanced Sustainable Systems (2025, 9(2), 2400604)',
+  }
+]
       },
       {
-        name: '김태용',
-        degree: '공학박사',
-        affiliation: '구조공학연구실',
-        email: 'kimcs-c2@koreatech.ac.kr',
-        website: 'https://example.com',
+        name: 'Kim, Tae-Yong',
+        degree: 'Ph.D, Seoul National University',
+        affiliation: 'Associate Professor, Korea University of Technology and Education',
+        email: 'tykim11@koreatech.ac.kr',
+        website: 'https://www.koreatech.ac.kr/faculty/view.es?mid=b50201000000&division=1&classification=DEPF008&seq=801',
+        image: '/images/leeseunglab/Tae.png',
         history: [
-          '서울대학교 건축공학과 졸업',
-          '한국기술교육대학교 공학박사',
-          '내진 구조 설계 및 성능 평가 연구',
+          
         ],
         introduction:
-          '내진 구조 설계 및 탄소저감 건축 시스템 분야를 연구하고 있습니다.',
+          'Dr. Tae Yong Kim is an Assistant Professor in the Department of Chemical and Biological Engineering at Korea University of Technology and Education. He received his Ph.D. from Seoul National University and completed postdoctoral training at UC Berkeley, bringing broad expertise in heterogeneous catalysis, biomass valorization, and energy-related materials. His research spans catalytic conversion of renewable feedstocks, methane activation, and electrocatalysis for sustainable energy applications.',
         selectedPapers: [
-          'Existence and uniqueness of a weak solution of an extensible beam on a moving domain. Ha, J., Kim, D., & Shon, S. Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          'AI-based structural optimization for carbon reduction in building materials. Lee, S., & Kim, T. Building and Environment, 150, 112-125 (2024).',
-          'Performance-based seismic design of timber-concrete composite structures. Park, S., & Kwak, B. Engineering Structures, 210, 110-120 (2024).',
+          {
+            title: 'Impact of Nitrogen and Other Heteroatoms on Catalytic Cracking of Crude Waste Plastic Pyrolysis Oil for Light-Olefin Production',
+            authors: 'Tran, X. T.; Kim, T. Y.; Mun, D. H.; Ngo, T.-N. T.; Lee, Y.; Park, D. S.; Kang, K. H.; Park, Y.-K.; Kim, D. K.',
+            journal: 'ACS Catalysis (2026, in press)',
+          },
+          {
+            title: 'Electrospun PVDF/Si-HBP of 1st Generation Composite Nanofibers: Enabling Enhanced Charge Density and Power Output in TENG',
+            authors: 'Niranjana, V. S.; Woo, I.; Yoon, J. U.; Kim, T. Y.; Gajula, P.; Prabu, A. A.; Bae, J. W.',
+            journal: 'Advanced Composites and Hybrid Materials (2026, in press)',
+          },
+          {
+            title: 'Strategic Design of Oxophilic Dopants for Active and Durable Alkaline Hydrogen Evolution Reaction Under Seawater',
+            authors: 'Jung, H.; Lee, Y.; Cho, K.; Kim, T. Y.; Song, J.; Jung, H. S.; Park, S. I.; Lee, Y.; Moon, J.; Park, W.; Nam, J.; Park, S.; Kim, W.; Han, J. W.',
+            journal: 'Advanced Functional Materials (2025, in press)',
+          },
+          {
+            title: 'Chloride-Free Indium(III)-Catalyzed Glucose-to-HMF Conversion: Overcoming Kinetic Barriers via Water-Mediated Direct Dehydration',
+            authors: 'Keum, Y.; Jeong, H.; Kim, T. Y.; Han, J. W.; Kim, Y. J.; Baek, J.',
+            journal: 'Applied Catalysis B: Environmental and Energy (2025, 378, 125561)',
+          },
+          {
+            title: 'Sustained Virucidal Functionality in Practical-Scale Polymer Matrices Enabled by Visible Light-Responsive CuxO–TiO2 Photocatalyst',
+            authors: 'Lee, Y.; Lee, K.; Shin, J.; Choi, S.; Kim, S.; Kim, G. W.; Seo, A.; Han, J. W.; Kim, T. Y.; Nam, I.; Park, S.',
+            journal: 'Advanced Composites and Hybrid Materials (2025, 8, 303)',
+          },
+            {
+            title: 'Rational Design of Nitrogen-Doped Porous Carbon Support on Single Atom Catalysts for Efficient CO2 Electroreduction',
+            authors: 'Choi, Y.; Kim, K.-W.; Park, B. J.; Kim, T. Y.; Lee, Y.; Park, B.; Lee, Y.; Kim, J. K.; Han, J. W.',
+            journal: 'Journal of Materials Chemistry A (2025, in press)',
+          },
+            {
+            title: 'Lattice-Disordered Boron Nitride Colloidal Catalyst for Low-Temperature Selective Methane Oxidation',
+            authors: 'Kim, Y.; Choi, H.; Kim, T. Y.; Kang, S.; Choi, C.; Kim, J.; Song, C. K.; Sung, J.; Han, J. W.; Park, J.',
+            journal: 'ACS Catalysis (2024, 14, 15622)',
+          },
+            {
+            title: 'Intelligent Stress-Adaptive Binder Enabled by Shear-Thickening Property for Silicon Electrodes of Lithium-Ion Batteries',
+            authors: 'Kwon, O.; Kim, T. Y.; Kim, T.; Kang, J.; Jang, S.; Eom, H.; Choi, S.; Shin, J.; Park, J.; Seol, M.-L.; Han, J. W.; Park, S.; Lee, H.-W.; Nam, I.',
+            journal: 'Advanced Energy Materials (2024, 2304085)',
+          },
+             {
+            title: 'Computational Discovery of Optimal Dopants for Nickel Iron Oxyhydroxide to Enhance OER Activity and Saline Water Compatibility',
+            authors: 'Jung, H.; Song, J.; Lee, Y.; Jung, H. S.; Noh, K.-J.; Im, H.; Lee, Y.; Kim, T. Y.; Seo, O.; Watanabe, T.; Kumara, L. S. R.; Matsumura, D.; Park, S.; Han, J. W.',
+            journal: 'ACS Energy Letters (2024, 9, 2162–2172)',
+          },
+             {
+            title: 'Unveiling the Role of DMAP for the Se-Catalyzed Oxidative Carbonylation of Alcohols: A Mechanism Study',
+            authors: 'Lee, H. J.; Jang, S.; Kim, T. Y.; Han, J. W.; Nam, I.; Baek, J.; Kim, Y. J.',
+            journal: 'ACS Omega (2024, 9, 13200–13207)',
+          },
+             {
+            title: 'Design Strategies for Hydroxyapatite-Based Materials to Enhance Their Catalytic Performance and Applicability',
+            authors: 'Yook, H.; Hwang, J.; Yeo, W.; Bang, J.; Kim, J.; Kim, T. Y.; Choi, J.-S.; Han, J. W.',
+            journal: 'Advanced Materials (2023, 220498)',
+          },
+             {
+            title: 'Efficient Production of Adipic Acid by a Two-Step Catalytic Reaction of Biomass-Derived 2,5-Furandicarboxylic Acid',
+            authors: 'Tran, A. V.; Park, S.-K.; Lee, H. J.; Kim, T. Y.; Kim, Y.; Suh, Y.-W.; Lee, K.-Y.; Kim, Y. J.; Baek, J.',
+            journal: 'ChemSusChem (2022, 15, e20220037)',
+          },
+          {
+            title: 'Role of an Interface for Hydrogen Production Reaction over Size-Controlled Supported Metal Catalysts',
+            authors: 'Shin, D.; Huang, R.; Jang, M. G.; Choung, S.; Kim, Y.; Sung, K.; Kim, T. Y.; Han, J. W.',
+            journal: 'ACS Catalysis (2022, 12, 8082)',
+          },
+          {
+            title: 'Mesoporous Carbon Hollow Sphere with Dandelion-Like Radial-Hierarchy for High-Performance Supercapacitors',
+            authors: 'Kwak, S.; Eom, H.; Kang, J.; Jang, S.; Choi, S.; Kwon, O.; Kim, T. Y.; Nam, I.',
+            journal: 'International Journal of Energy Research (2022, 46, 4935)',
+          },
+          {
+            title: 'Pt(Dithiolene)-Based Colorimetric Chemosensors for Multiple Metal-Ion Sensing',
+            authors: 'Son, H.; Jang, S.; Lim, G.; Kim, T. Y.; Nam, I.; Noh, D.-Y.',
+            journal: 'Sustainability (2021, 13, 8160)',
+          },
+          {
+            title: 'Synthesis of Au Sponges Based on Agarose Template',
+            authors: 'Kwak, S.; Jang, S.; Park, S.; Kang, J.; Kim, T. Y.; Nam, I.',
+            journal: 'Scripta Materialia (2021, 196, 113769)',
+          },
+          {
+            title: 'Redox-Driven Restructuring of Lithium Molybdenum Oxide Nanoclusters Boosts the Selective Oxidation of Methane',
+            authors: 'Kim, Y.; Kim, T. Y.; Song, C. K.; Lee, K. R.; Bae, S.; Park, H.; Yun, D.; Yun, Y. S.; Nam, I.; Park, J.; Lee, H.; Yi, J.',
+            journal: 'Nano Energy (2021, 82, 105741)',
+          },
+
         ],
       },
     ],
@@ -120,8 +425,8 @@ export const researchGroups: ResearchGroup[] = [
         name: 'Kwag, Byung-Chang',
         degree: 'University of Colorado, Boulder',
         affiliation: 'Assistant Professor, Korea University of Technology and Education',
-        email: 'hong-e1@koreatech.ac.kr',
-        website: 'https://example.com',
+        email: 'bckwag@koreatech.ac.kr',
+        website: 'https://www.koreatech.ac.kr/faculty/view.es?mid=b30103010100&division=1&classification=DEPF006&seq=884',
         image: '/images/leeseunglab/bckwag.png',
         history: [
          
@@ -129,10 +434,61 @@ export const researchGroups: ResearchGroup[] = [
         introduction:
           'Professor Byung Chang Kwag received his M.S. and Ph.D. in Building Systems Engineering from the University of Colorado Boulder, USA. His research focuses on net-zero energy buildings, high performing buildings, and AI-based smart housing systems, with an emphasis on integrating energy efficiency, advanced control technologies, and user-centered performance evaluation. He has conducted both academic and applied research in building energy systems and housing technologies through his experience at LG Electronics and the Korea Land and Housing Research Institute. His recent work explores AI-driven energy management, human-centered smart home systems, and the development of next-generation residential infrastructures that support autonomous service robots.',
         selectedPapers: [
-          'Existence and uniqueness of a weak solution of an extensible beam on a moving domain. Ha, J., Kim, D., & Shon, S. Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          'AI-based structural optimization for carbon reduction in building materials. Lee, S., & Kim, T. Building and Environment, 150, 112-125 (2024).',
-          'Performance-based seismic design of timber-concrete composite structures. Park, S., & Kwak, B. Engineering Structures, 210, 110-120 (2024).',
-        ],
+  {
+    title: 'Louver design and airflow patterns analysis of air conditioning outdoor units for enhanced safety and efficiency in apartment buildings',
+    authors: 'Lee, S. H.; Yun, H. D.; Im, D. K.; Kwag, B. C.',
+    journal: 'Journal of Mechanical Science and Technology (2025, 39(8), 4547-4555)',
+  },
+  {
+    title: '참여디자인 관점에서 본 리빙랩 운영구조와 지속가능성에 대한 연구',
+    authors: '이성재; 김길태; 정재희; 곽병창',
+    journal: '토지주택연구 (2025, 16(3), 195-221)',
+  },
+
+  {
+    title: 'Development of tracer gas method to improve indoor air quality: a study on ventilation performance in apartment buildings in South Korea',
+    authors: 'Lee, S. M.; Lee, S. Y.; Kim, G. T.; Kwag, B. C.',
+    journal: 'Buildings (2024, 15(1), 49)',
+  },
+  {
+    title: 'Integration of Photovoltaic Systems for Energy Self-Sufficient Low-Rise Multi-Family Residential Buildings in Republic of Korea',
+    authors: 'Kwag, B. C.; Kim, G. T.; Hwang, I. T.',
+    journal: 'Buildings (2024, 14(8), 2522)',
+  },
+
+  {
+    title: 'Evaluation of the impact of installation environment for a condensing unit of a split-type air conditioner in a plant room of Korean apartment dwellings',
+    authors: 'Kwag, B. C.; Kim, G. T.; Im, D. K.',
+    journal: 'International Journal of Refrigeration (2023, 156, 207-218)',
+  },
+  {
+    title: 'CO2 추적가스 농도감소법을 이용한 공동주택의 급·배기구 조합에 따른 환기 성능 분석',
+    authors: '이상윤; 이수만; 김종엽; 김길태; 곽병창',
+    journal: '토지주택연구 (2023, 14(4), 111-120)',
+  },
+  {
+    title: '스마트하우징 주거서비스 기술에 대한 이용자 인식 개선을 위한 리빙랩 활용성 분석 연구',
+    authors: '곽병창; 지원길; 이성재; 김길태',
+    journal: '토지주택연구 (2023, 14(3), 125-135)',
+  },
+
+  {
+    title: '다기준 의사결정방법을 이용한 공동주택 내 환기장치 종류별 효과분석',
+    authors: '박경용; 김길태; 김태민; 지원길; 곽병창',
+    journal: '토지주택연구 (2022, 13(3), 107-113)',
+  },
+  {
+    title: '실증실험을 통한 측정 위치에 따른 주거공간 환기성능 평가',
+    authors: '곽병창; 이수만; 김길태; 김종엽',
+    journal: '토지주택연구 (2022, 13(3), 93-106)',
+  },
+
+  {
+    title: '공동주택 세대 습기 제어를 위한 환기 시스템 운영 전략 효과 연구',
+    authors: '곽병창; 김태민; 김길태; 지원길; 박경용',
+    journal: '한국건축친환경설비학회논문집 (2021, 15(5), 572-585)',
+  }
+]
       },
       {
         name: '박수완',
@@ -148,9 +504,21 @@ export const researchGroups: ResearchGroup[] = [
         introduction:
           '내진 구조 설계 및 탄소저감 건축 시스템 분야를 연구하고 있습니다.',
         selectedPapers: [
-          'Existence and uniqueness of a weak solution of an extensible beam on a moving domain. Ha, J., Kim, D., & Shon, S. Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          'AI-based structural optimization for carbon reduction in building materials. Lee, S., & Kim, T. Building and Environment, 150, 112-125 (2024).',
-          'Performance-based seismic design of timber-concrete composite structures. Park, S., & Kwak, B. Engineering Structures, 210, 110-120 (2024).',
+          {
+            title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
+            authors: 'Ha, J., Kim, D., & Shon, S.',
+            journal: 'Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
+          },
+          {
+            title: 'AI-based structural optimization for carbon reduction in building materials',
+            authors: 'Lee, S., & Kim, T.',
+            journal: 'Building and Environment, 150, 112-125 (2024).',
+          },
+          {
+            title: 'Performance-based seismic design of timber-concrete composite structures',
+            authors: 'Park, S., & Kwak, B.',
+            journal: 'Engineering Structures, 210, 110-120 (2024).',
+          },
         ],
       },
     ],

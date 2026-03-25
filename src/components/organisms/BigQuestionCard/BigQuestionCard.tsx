@@ -14,6 +14,7 @@ export interface BigQuestionCardProps extends BigQuestion {
 export function BigQuestionCard({
   id,
   question,
+  content,
   image,
   className,
   index = 0,
@@ -37,35 +38,37 @@ export function BigQuestionCard({
           'transition-shadow duration-300',
           'hover:shadow-lg',
           'cursor-pointer',
-          'flex flex-col',
-          'h-[280px]'
         )}
         style={{ transitionDelay: `${index * 0.05}s` }}
       >
-        <Link href={`/big-questions/${id}`} className="flex flex-col flex-1" style={{ padding: '32px' }} disableAnimation>
-          {/* Icon Section - Centered at top */}
+        <Link href={`/big-questions/${id}`} className="flex flex-row" disableAnimation>
+          {/* Left: Image */}
           {image && (
-            <div className="flex justify-center items-center" style={{ paddingBottom: '24px' }}>
-              <div className="w-20 h-20 flex items-center justify-center">
+            <div className="flex-shrink-0 bg-gray-50 overflow-hidden" style={{ width: 240 }}>
+              <div style={{ aspectRatio: '3 / 2' }} className="w-full h-full flex items-center justify-center">
                 <Image
                   src={image}
                   alt=""
-                  className="object-contain"
-                  style={{ width: 80, height: 80 }}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
           )}
 
-          {/* Question Text - Centered */}
-          <div className="flex-1">
-            <p className="text-center text-lg font-medium text-black leading-relaxed group-hover:text-[#00380A] transition-colors">
+          {/* Right: Text */}
+          <div className="flex-1 p-8 flex flex-col justify-center">
+            <p className="text-xl font-bold text-black leading-snug group-hover:text-[#00380A] transition-colors mb-3 font-[Inter,Pretendard,sans-serif]">
               {question}
             </p>
+            {content && content.length > 0 && (
+              <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 font-[Inter,Pretendard,sans-serif]">
+                {content[0]}
+              </p>
+            )}
           </div>
         </Link>
 
-        {/* Progress Bar - At bottom, attached to border */}
+        {/* Progress Bar */}
         <div className="w-full">
           <div className="h-[3px] w-full bg-gray-200 overflow-hidden">
             <motion.div
@@ -80,9 +83,6 @@ export function BigQuestionCard({
           </div>
         </div>
       </motion.article>
-
-      {/* Bottom Divider Line - Outside the card with spacing */}
-      <div className="w-full h-[1px] bg-[#84889A]" style={{ marginTop: 20 }} />
     </div>
   );
 }

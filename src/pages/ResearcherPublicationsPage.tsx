@@ -1,8 +1,10 @@
+import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { DetailPageLayout } from '@/components/templates/DetailPageLayout';
 import { ContentSection } from '@/components/templates/ContentSection';
 import { Container } from '@/components/atoms/Container';
 import { researchGroups } from '@/data/researchGroupData';
+import type { PaperEntry } from '@/data/researchGroupData';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export function ResearcherPublicationsPage() {
@@ -17,7 +19,7 @@ export function ResearcherPublicationsPage() {
     return (
       <DetailPageLayout
         title={t('researchGroup.pageTitle')}
-        heroImage="/images/leeseunglab/people-hero.jpg"
+        heroImage="/images/leeseunglab/people-hero.png"
       >
         <ContentSection background="white" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <Container maxWidth="none" className="max-w-[900px]">
@@ -38,7 +40,7 @@ export function ResearcherPublicationsPage() {
   return (
     <DetailPageLayout
       title={`${researcher.name} - Publications`}
-      heroImage="/images/leeseunglab/people-hero.jpg"
+      heroImage="/images/leeseunglab/people-hero.png"
     >
       <ContentSection background="white" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <Container maxWidth="none" className="max-w-[900px]">
@@ -69,17 +71,7 @@ export function ResearcherPublicationsPage() {
           </h3>
 
           {researcher.selectedPapers && researcher.selectedPapers.length > 0 ? (
-            <ol className="space-y-5">
-              {researcher.selectedPapers.map((paper, index) => (
-                <li
-                  key={index}
-                  className="flex gap-4 text-base text-gray-800 leading-relaxed font-[Inter,Pretendard,sans-serif]"
-                >
-                  <span className="text-gray-400 font-bold flex-shrink-0">{index + 1}.</span>
-                  <span>{paper}</span>
-                </li>
-              ))}
-            </ol>
+            <PapersByYear papers={researcher.selectedPapers} />
           ) : (
             <p className="text-gray-500 font-[Inter,Pretendard,sans-serif]">
               등록된 논문이 없습니다.
@@ -98,5 +90,49 @@ export function ResearcherPublicationsPage() {
         </Container>
       </ContentSection>
     </DetailPageLayout>
+  );
+}
+
+function PapersByYear({ papers }: { papers: PaperEntry[] }) {
+  const grouped = useMemo(() => {
+    const map = new Map<number, PaperEntry[]>();
+    for (const paper of papers) {
+      const list = map.get(paper.year) ?? [];
+      list.push(paper);
+      map.set(paper.year, list);
+    }
+    return [...map.entries()].sort(([a], [b]) => b - a);
+  }, [papers]);
+
+  let counter = 0;
+
+  return (
+    <div className="space-y-8">
+      {grouped.map(([year, yearPapers]) => (
+        <section key={year}>
+          <h4 className="text-2xl font-extrabold text-gray-800 mb-4 pb-2 border-b border-gray-100 font-[Inter,Pretendard,sans-serif]">
+            {year}
+          </h4>
+          <ol className="space-y-5">
+            {yearPapers.map((paper, i) => {
+              counter++;
+              return (
+                <li
+                  key={i}
+                  className="flex gap-4 text-base leading-relaxed font-[Inter,Pretendard,sans-serif]"
+                >
+                  <span className="text-gray-400 font-bold flex-shrink-0">{counter}.</span>
+                  <div>
+                    <p className="text-gray-900 font-semibold">{paper.title}</p>
+                    <p className="text-gray-600 text-sm mt-1">{paper.authors}</p>
+                    <p className="text-gray-500 text-sm italic">{paper.journal}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      ))}
+    </div>
   );
 }

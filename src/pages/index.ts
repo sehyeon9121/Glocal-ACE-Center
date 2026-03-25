@@ -10,3 +10,4 @@ export { JoinUsPage } from './JoinUsPage';
 export { ClimateSnacksPage } from './ClimateSnacksPage';
 export { ResearchGroupPage } from './ResearchGroupPage';
 export { ResearcherPublicationsPage } from './ResearcherPublicationsPage';
+export { GreetingPage } from './GreetingPage';
