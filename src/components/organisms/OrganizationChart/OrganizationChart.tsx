@@ -16,17 +16,17 @@ export function OrganizationChart({ className }: OrganizationChartProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="flex justify-center mb-0"
+        className="flex justify-center" style={{ marginBottom: 20 }}
       >
         <div
           className={cn(
             'bg-[#1B3A4B] rounded-2xl',
-            'px-12 py-6',
             'flex flex-col items-center justify-center',
             'shadow-sm min-w-[200px]'
           )}
+          style={{ padding: 12 }}
         >
-          <div className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-300 mb-1 font-[Inter,Pretendard,sans-serif]">
+          <div className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-300 font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 8 }}>
             {director.title}
           </div>
           <div className="text-xl font-bold text-white font-[Inter,Pretendard,sans-serif]">

@@ -121,7 +121,8 @@ export function PublicationsPage() {
               placeholder="Search by title or author..."
               value={searchTerm}
               onChange={(e) => handleSearchChange(e.target.value)}
-              className="flex-1 px-5 py-6 rounded-xl border border-gray-300 text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-[Inter,Pretendard,sans-serif]"
+              className="flex-1 rounded-xl border border-gray-300 text-base focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all font-[Inter,Pretendard,sans-serif]"
+              style={{ padding: 14 }}
             />
             <select
               value={selectedResearcher}
@@ -149,16 +150,16 @@ export function PublicationsPage() {
             </select>
           </div>
 
-          <h3 className="text-4xl font-extrabold text-gray-800 mt-12 mb-2 font-[Inter,Pretendard,sans-serif]">
+          <h3 className="text-4xl font-extrabold text-gray-800 mb-2 font-[Inter,Pretendard,sans-serif]" style={{ marginTop: 14 }}>
             Publication
           </h3>
-          <hr className="border-gray-300 mb-8" />
+          <hr className="border-gray-300" style={{ marginBottom: 16 }} />
 
           {currentPapers.length > 0 ? (
             <>
               <ul className="divide-y divide-gray-200">
                 {currentPapers.map((paper, i) => (
-                  <li key={i} className="py-6 flex gap-4">
+                  <li key={i} className="flex gap-4" style={{ paddingTop: 18, paddingBottom: 18 }}>
                     <span className="text-gray-400 font-bold flex-shrink-0 font-[Inter,Pretendard,sans-serif]">
                       {startIndex + i + 1}.
                     </span>

@@ -22,11 +22,12 @@ export function ResearchGroupPage() {
             {researchGroups.map((group) => (
               <div
                 key={group.groupName}
-                className="border border-gray-200 rounded-xl bg-gray-50/50 p-8 flex flex-col gap-6"
+                className="border border-gray-200 rounded-xl bg-gray-50/50 pb-8 flex flex-col gap-6"
+                style={{ paddingTop: 18, paddingLeft: 10, paddingRight: 10 }}
               >
                 <h3 className="text-2xl font-extrabold text-gray-900 font-[Inter,Pretendard,sans-serif]">
                   {group.groupName
-                    .replace(/([ACE])([-+])/g, '$1|||$2|||')
+                    .replace(/^([ACE])([-+i])/g, '$1|||$2|||')
                     .split('|||')
                     .map((part, i) =>
                       /^[ACE]$/.test(part) ? (

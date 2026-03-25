@@ -49,7 +49,7 @@ export function BigQuestionDetailPage() {
               {question.question}
             </h1>
 
-            <hr className="border-gray-200 mb-10" />
+            <hr className="border-gray-200" style={{ marginBottom: 14 }} />
 
             {/* 핵심 연구 내용 */}
             <h2 className="text-2xl font-bold text-[#00380A] mb-6 font-[Inter,Pretendard,sans-serif]">
@@ -70,7 +70,7 @@ export function BigQuestionDetailPage() {
 
             {/* 핵심 포인트 */}
             {question.bulletPoints && question.bulletPoints.length > 0 && (
-              <div className="mt-10">
+              <div style={{ marginTop: 18 }}>
                 <h3 className="text-xl font-bold text-gray-800 mb-4 font-[Inter,Pretendard,sans-serif]">
                   핵심 연구 내용
                 </h3>
@@ -141,7 +141,7 @@ export function BigQuestionDetailPage() {
       </ContentSection>
 
       {/* Navigation */}
-      <ContentSection background="light" padding="lg">
+      <ContentSection background="light" padding="lg" style={{ marginTop: 20 }}>
         <Container maxWidth="none" className="max-w-[900px]">
           <div className="flex flex-col sm:flex-row justify-between gap-4">
             {prevQuestion ? (

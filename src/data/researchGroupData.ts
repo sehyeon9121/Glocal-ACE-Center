@@ -168,24 +168,69 @@ export const researchGroups: ResearchGroup[] = [
           
         ],
         introduction:
-          'ddddd.',
+          'Jin Gang Lee is an Assistant Professor in the Department of Architectural Engineering at KOREATECH. He earned his B.S., M.S., and Ph.D. in architecture from Seoul National University and gained both international and domestic research experience as a Postdoctoral Fellow at The Hong Kong Polytechnic University and as a researcher at Seoul National University. His research and teaching focus on Building Information Modeling (BIM) and smart construction, with an emphasis on integrating advanced technologies such as Artificial Intelligence and digital twins into the built environment. His recent work includes digital twin-based construction robotics simulation, AI-driven design automation for smart farm facilities, and the analysis of VR-based construction safety training programs.',
         selectedPapers: [
-          {
-            title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
-            authors: 'Ha, J., Kim, D., & Shon, S.',
-            journal: 'Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          },
-          {
-            title: 'AI-based structural optimization for carbon reduction in building materials',
-            authors: 'Lee, S., & Kim, T.',
-            journal: 'Building and Environment, 150, 112-125 (2024).',
-          },
-          {
-            title: 'Performance-based seismic design of timber-concrete composite structures',
-            authors: 'Park, S., & Kwak, B.',
-            journal: 'Engineering Structures, 210, 110-120 (2024).',
-          },
-        ],
+  {
+    title: 'OCR 을 활용한 외국인 작업자 대상 VR 건설안전 교육자료 이독성 평가',
+    authors: '최기훈, & 이진강',
+    journal: '한국건축시공학회지 (JKIBC), 26(1), 127-138 (2026).',
+  },
+  {
+    title: '파라메트릭 모델링을 활용한 BIM 기반 건설신기술 정보 활용 프로세스 개발',
+    authors: '이진강, 김다인, & 최재현',
+    journal: '대한건축학회논문집, 41(10), 319-327 (2025).',
+  },
+  {
+    title: 'VAR 모형을 이용한 건설공사비지수와 운임지수의 관계에 대한 연구',
+    authors: '정승환, & 이진강',
+    journal: '한국건축시공학회지, 25(1), 101-112 (2025).',
+  },
+  {
+    title: 'Time lag analysis of real estate supply policies for housing construction projects',
+    authors: 'Lee, J. G., Jeong, S., & Choi, J.',
+    journal: 'Journal of Asian Architecture and Building Engineering, 24(4), 2788-2799 (2025).',
+  },
+  {
+    title: 'IPA 방법을 활용한 국내 건설 산업 공정관리 역량 평가',
+    authors: '이진강, 송보현, 김다인, & 최재현',
+    journal: '한국건축시공학회지, 24(1), 145-156 (2024).',
+  },
+  {
+    title: 'Transfer learning-based object detection model for steel structure bolt fastening inspection',
+    authors: 'Choi, J., Ha, M., & Lee, J. G.',
+    journal: 'Applied Sciences, 13(17), 9499 (2023).',
+  },
+  {
+    title: '건축 시공단계 검측 업무 자동 생성을 위한 프레임워크 개발',
+    authors: '조석연, 이진강, & 최재현',
+    journal: '한국건설관리학회논문집, 24(1), 40-50 (2023).',
+  },
+  {
+    title: 'Decision-making framework for sustainable construction products selection in SMEs',
+    authors: 'Sivasubramanian, D., & Lee, J. G.',
+    journal: 'Sustainability, 14(21), 14264 (2022).',
+  },
+  {
+    title: 'Synthetic image dataset development for vision-based construction equipment detection',
+    authors: 'Lee, J. G., Hwang, J., Chi, S., & Seo, J.',
+    journal: 'Journal of Computing in Civil Engineering, 36(5), 04022020 (2022).',
+  },
+  {
+    title: 'Early-stage cost estimation model for power generation project with limited historical data',
+    authors: 'Lee, J. G., Lee, H. S., Park, M., & Seo, J.',
+    journal: 'Engineering, Construction and Architectural Management, 29(7), 2599-2614 (2022).',
+  },
+  {
+    title: 'Wearable acceleration-based action recognition for long-term and continuous activity analysis in construction site',
+    authors: 'Gong, Y., Yang, K., Seo, J., & Lee, J. G.',
+    journal: 'Journal of Building Engineering, 52, 104448 (2022).',
+  },
+  {
+    title: 'Productivity analysis method of construction structural work using computer vision',
+    authors: 'Lee, J. G., Seo, J., Chi, S., & Hwang, J.',
+    journal: 'Journal of Construction Automation and Robotics, 1(2), 7-12 (2022).',
+  },
+]
       },
     ],
   },
@@ -491,35 +536,109 @@ export const researchGroups: ResearchGroup[] = [
 ]
       },
       {
-        name: '박수완',
-        degree: '공학박사',
-        affiliation: '구조공학연구실',
-        email: 'kimcs-e2@koreatech.ac.kr',
-        website: 'https://example.com',
+        name: 'Park, Soomin',
+        degree: 'Ph.D., Seoul National University',
+        affiliation: 'Associate Professor, Korea University of Technology and Education',
+        email: 'smpark@koreatech.ac.kr',
+        website: 'https://sites.google.com/view/theparkgroup/',
+        image: '/images/leeseunglab/park.png',
         history: [
-          '서울대학교 건축공학과 졸업',
-          '한국기술교육대학교 공학박사',
-          '내진 구조 설계 및 성능 평가 연구',
+         
         ],
         introduction:
-          '내진 구조 설계 및 탄소저감 건축 시스템 분야를 연구하고 있습니다.',
+          'Soomin Park is an Associate Professor in the Department of Chemical and Biological Engineering at the Korea University of Technology and Education (KOREATECH). He earned his Ph.D. in Chemical and Biological Engineering from Seoul National University and pursued postdoctoral research at the Lawrence Berkeley National Laboratory (LBNL). Before joining KOREATECH, he served as a Staff Engineer at the Samsung Research.His research focuses on developing advanced functional materials for secondary batteries, artificial photosynthesis, and medical applications. He is currently advancing innovations in carbon-neutral technologies—such as battery recycling and sustainable energy systems—with a focus on bridging fundamental material science with practical solutions for global environmental challenges.',
         selectedPapers: [
-          {
-            title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
-            authors: 'Ha, J., Kim, D., & Shon, S.',
-            journal: 'Journal of the Korean Mathematical Society, 62(2), 327-344 (2025).',
-          },
-          {
-            title: 'AI-based structural optimization for carbon reduction in building materials',
-            authors: 'Lee, S., & Kim, T.',
-            journal: 'Building and Environment, 150, 112-125 (2024).',
-          },
-          {
-            title: 'Performance-based seismic design of timber-concrete composite structures',
-            authors: 'Park, S., & Kwak, B.',
-            journal: 'Engineering Structures, 210, 110-120 (2024).',
-          },
-        ],
+  {
+    title: 'CuxO-TiO2-embedded nanofiber filters with optimized Cu/(Ti/C) composition for sustained visible-light-driven antiviral performance',
+    authors: 'Kim, S., Shin, H. E., Woo, I., Lee, Y., Seo, A., Lee, K., Chae, S., Nam, I., & Park, S.',
+    journal: 'Korean Journal of Chemical Engineering, 43:467 (2026).',
+  },
+  {
+    title: 'Interfacial charge dynamics and optical constraints in chlorophyll-functionalized TiO2 nanotube arrays',
+    authors: 'Seo, A., Lee, K., Lee, Y., Kim, S., Lee, S., Chae, S., Nam, I., Yu, S., & Park, S.',
+    journal: 'International Journal of Energy Research, 3924822 (2025).',
+  },
+  {
+    title: 'Reevaluating carbonization: The untapped potential of pristine ZIFs for lithium metal batteries',
+    authors: 'Kang, J., Kwon, O., Choi, S., Choi, S., Jang, S., Eom, H., Seo, H., Shin, J., Park, J., Kim, J. H., Seol, M.-L., Han, J. W., Park, S., Lee, H.-W., & Nam, I.',
+    journal: 'Chemical Engineering Journal, 522:166980 (2025).',
+  },
+  {
+    title: 'Sustained virucidal functionality in practical-scale polymer matrices enabled by visible-light-responsive CuxO-TiO2 photocatalyst',
+    authors: 'Lee, Y., Lee, K., Shin, J., Choi, S., Kim, S., Kim, G. W., Seo, A., Han, J. W., Kim, T. Y., Nam, I., & Park, S.',
+    journal: 'Advanced Composites and Hybrid Materials, 8:303 (2025).',
+  },
+  {
+    title: 'Ambient multivariate synthesis of ZIF-8 nanoparticles: Optimization and application in Li metal batteries',
+    authors: 'Seo, H., Lee, Y., Kim, H., Jang, S., Kim, J. H., Kang, J., Eom, H., Kwon, O., Shin, J., Park, J., Choi, S., Bae, Y., Park, C. W., Seol, M.-L., Song, H., Park, S., & Nam, I.',
+    journal: 'Journal of Alloys and Compounds, 1013:178578 (2025).',
+  },
+  {
+    title: 'Enhancing the performance of LiFePO4 cathodes in Li-ion batteries: Role of surface coating based on ZIF-8 particle size optimization',
+    authors: 'Seo, H., Kang, J., Kim, H., Jang, S., Kim, J. H., Choi, S., Eom, H., Kwon, O., Shing, J., Park, J., Yoo, D., Jeong, S., Noh, S. H., Park, C. W., Seol, M.-L., Park, S., & Nam, I.',
+    journal: 'Korean Journal of Chemical Engineering, 42:1529 (2025).',
+  },
+  {
+    title: 'Non-volatile and stretchable polyvinylchloride-based solid-state electrolyte for capacitive energy storage',
+    authors: 'Oh, S. J., Park, H. S., Lee, K., Lee, Y. J., Park, S., & Bae, J. W.',
+    journal: 'Journal of Chemical Engineering, 41:1861 (2024).',
+  },
+  {
+    title: 'Intelligent stress-adaptive binder enabled by shear-thickening property for silicon electrodes of lithium-ion batteries',
+    authors: 'Kwon, O., Kim, T. Y., Kim, T., Kang, J., Jang, S., Eom, H., Choi, S., Shin, J., Park, J., Seol, M.-L., Han, J. W., Park, S., Lee, H.-W., & Nam, I.',
+    journal: 'Advanced Energy Materials, 14:2304085 (2024).',
+  },
+  {
+    title: 'Optimizing molecular weight of polyethylene glycol as an additive for stabilizing Zn metal anode in aqueous electrolyte',
+    authors: 'Kwon, O., Kang, J., Jang, S., Eom, H., Choi, S., Shin, J., Park, J., Seo, H., Kim, J. H., Park, S., & Nam, I.',
+    journal: 'Korean Journal of Chemical Engineering, 41:539 (2024).',
+  },
+  {
+    title: 'Synthesizing the gel polymer electrolyte for supercapacitor, assembling supercapacitor using coin cell, and measuring gel electrolyte performance',
+    authors: 'Kwon, O., Kang, J., Jang, S., Choi, S., Eom, H., Shin, J., Park, J., Park, S., & Nam, I.',
+    journal: 'Journal of Visualized Experiments, 189:e64057 (2022).',
+  },
+  {
+    title: 'Rational design of fluorescent/colorimetric chemosensors for detecting transition metal ions by varying functional groups',
+    authors: 'Park, J.-K., Shin, J., Jang, S., Seol, M.-L., Kang, J., Choi, S., Eom, H., Kwon, O., Park, S., Noh, D.-Y., & Nam, I.',
+    journal: 'Inorganics, 10:189 (2022).',
+  },
+  {
+    title: 'Fabrication of antiviral nanofibers containing various Cu salts and ZnO nanorods by electrospinning',
+    authors: 'Yoon, J., Kim, J., Lee, J., Hong, S. P., Park, S., Jeong, Y. W., Lee, C., & Oh, S.-G.',
+    journal: 'Journal of Industrial and Engineering Chemistry, 116:572 (2022).',
+  },
+  {
+    title: 'The major trimeric antenna complexes serve as a site for qH-energy dissipation in plants',
+    authors: 'Bru, P., Steen, C. J., Park, S., Amstutz, C. L., Sylak-Glassman, E. J., Lam, L., Fekete, A., Mueller, M. J., Longoni, F., Fleming, G. R., Niyogi, K. K., & Malnoë, A.',
+    journal: 'Journal of Biological Chemistry, 298:102519 (2022).',
+  },
+  {
+    title: 'Agarose gel-templating synthesis of a 3D wrinkled graphene architecture for enhanced supercapacitor performance',
+    authors: 'Shin, J., Park, J.-K., Kim, G. W., Nam, I., & Park, S.',
+    journal: 'Micromachines, 13:1113 (2022).',
+  },
+  {
+    title: 'Synthesis of porous metallic structure and its application for energy storage materials',
+    authors: 'Jang, S., Kang, J., Park, S., & Nam, I.',
+    journal: 'Ceramist, 25:206 (2022).',
+  },
+  {
+    title: 'Practical scale evaluation of a photocatalytic air purifier equipped with a titania-zeolite composite bead filter for VOC removal and viral inactivation',
+    authors: 'Kim, S., Kim, S., Park, H.-J., Park, S., Kim, J. Y., Jeong, Y. W., Yang, H. H., Choi, Y., Yeom, M., Song, D., & Lee, C.',
+    journal: 'Environmental Research, 204:112036 (2022).',
+  },
+  {
+    title: 'Fabrication of Ag-doped ZnO/PAN composite nanofiber filters: Photocatalytic and anti-virus performance',
+    authors: 'Yoon, J., Kim, J., Park, S., Jeong, Y. W., Lee, C., & Oh, S.-G.',
+    journal: 'Korean Journal of Chemical Engineering, 39:1632 (2022).',
+  },
+  {
+    title: 'Synthesis of Au sponges based on agarose template',
+    authors: 'Kwak, S., Jang, S., Park, S., Kang, J., & Nam, I.',
+    journal: 'Scripta Materialia, 196:113769 (2021).',
+  },
+]
       },
     ],
   },

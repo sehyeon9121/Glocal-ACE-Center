@@ -16,8 +16,8 @@ export function TeamPage() {
       {/* Organization Chart Section */}
       <ContentSection background="light" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <Container maxWidth="none" className="max-w-[900px]">
-          <SectionHeader title="Organization" />
-          <OrganizationChart className="mt-10" />
+          <SectionHeader title="Organization" style={{ marginBottom: 20 }} />
+          <OrganizationChart />
         </Container>
       </ContentSection>
 

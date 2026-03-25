@@ -15,9 +15,10 @@ export function ProfessorProfileCard({
   return (
     <div
       className={cn(
-        'flex gap-8 bg-white px-8 py-8 border border-gray-200 rounded-lg',
+        'flex gap-8 bg-white border border-gray-200 rounded-lg',
         className
       )}
+      style={{ padding: 16 }}
     >
       {/* Left: Photo + Icons */}
       <div className="flex flex-col items-center flex-shrink-0">
@@ -33,7 +34,7 @@ export function ProfessorProfileCard({
         </div>
 
         {/* Functional Icons */}
-        <div className="flex justify-center gap-5 mt-4">
+        <div className="flex justify-center gap-5" style={{ marginTop: 18 }}>
           {/* Email */}
           <a
             href={`mailto:${researcher.email}`}
@@ -72,7 +73,7 @@ export function ProfessorProfileCard({
       {/* Right: Name, Title, Bio */}
       <div className="flex-1 min-w-0 flex flex-col">
         {/* Name & Degree - top */}
-        <div className="mt-6">
+        <div>
           <h3 className="text-2xl font-bold text-black mb-3 font-[Inter,Pretendard,sans-serif]">
             {researcher.name}
           </h3>
