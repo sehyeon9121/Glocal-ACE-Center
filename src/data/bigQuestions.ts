@@ -5,7 +5,7 @@ export const bigQuestions: BigQuestion[] = [
     id: 1,
     question: '1단계: 기초 구축 및 핵심기술 확보 (2026~2028)',
     icon: 'Sprout',
-    image: '/images/leeseunglab/icon-crop.png',
+    image: '/images/leeseunglab/11111111.png',
     content: [
       '',
       'AI 기반 탄소중립 설계 인프라 구축 및 지역 협력 기반 조성',
@@ -24,7 +24,7 @@ export const bigQuestions: BigQuestion[] = [
     id: 2,
     question: '2단계: 기술 고도화 및 실증 연구 (2029~2031)',
     icon: 'TreeDeciduous',
-    image: '/images/leeseunglab/icon-robin.png',
+    image: '/images/leeseunglab/2222.png',
     content: [
       '',
       'AI-탄소중립 기술 융합 및 중부권 테스트베드(Test-bed) 적용',
@@ -62,7 +62,7 @@ export const bigQuestions: BigQuestion[] = [
     id: 4,
     question: '4단계: 지속가능 운영 및 미래 비전 (2035~)',
     icon: 'Thermometer',
-    image: '/images/leeseunglab/icon-climate.png',
+    image: '/images/leeseunglab/4444444.png',
     content: [
       '',
       '연구 성과의 지속가능한 운영 체계를 확립하고, AI 기반 탄소중립 건축 기술의 미래 확장과 글로벌 리더십을 강화',
