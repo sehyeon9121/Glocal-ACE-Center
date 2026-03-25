@@ -97,9 +97,10 @@ function PapersByYear({ papers }: { papers: PaperEntry[] }) {
   const grouped = useMemo(() => {
     const map = new Map<number, PaperEntry[]>();
     for (const paper of papers) {
-      const list = map.get(paper.year) ?? [];
+      const year = paper.year ?? 0;
+      const list = map.get(year) ?? [];
       list.push(paper);
-      map.set(paper.year, list);
+      map.set(year, list);
     }
     return [...map.entries()].sort(([a], [b]) => b - a);
   }, [papers]);

@@ -26,23 +26,10 @@ export function NavigationBar({ className }: NavigationBarProps) {
     { label: t('nav.research'), href: '/#research' },
   ];
 
-  const publicationsDropdownItems = [
-    { label: 'SCIE', href: '/publications/scie' },
-    { label: 'KCI', href: '/publications/kci' },
-    { label: 'Int. Conference', href: '/publications/international-conference' },
-    { label: 'Dom. Conference', href: '/publications/domestic-conference' },
-    { label: 'SCOPUS', href: '/publications/scopus' },
-  ];
-
   const peopleDropdownItems = [
     { label: t('nav.ourTeam'), href: '/team' },
     { label: t('nav.researchGroup'), href: '/research-group' },
     // { label: t('nav.joinUs'), href: '/join-us' },  // 비활성화
-  ];
-
-  const newsDropdownItems = [
-    { label: t('nav.newsUpdates'), href: '/news' },
-    // { label: t('nav.climateSnacks'), href: '/climate-snacks' },  // 비활성화
   ];
 
   // Close menu when clicking outside

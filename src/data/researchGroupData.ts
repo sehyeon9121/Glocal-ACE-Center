@@ -7,6 +7,7 @@ export interface PaperEntry {
   title: string;
   authors: string;
   journal: string;
+  year?: number;
 }
 
 export interface ResearcherProfile {
