@@ -15,15 +15,14 @@ export function ProfessorProfileCard({
   return (
     <div
       className={cn(
-        'flex gap-8 bg-white border border-gray-200 rounded-lg',
+        'flex flex-col md:flex-row gap-5 md:gap-8 bg-white border border-gray-200 rounded-lg p-4',
         className
       )}
-      style={{ padding: 16 }}
     >
       {/* Left: Photo + Icons */}
       <div className="flex flex-col items-center flex-shrink-0">
         {/* Profile Photo */}
-        <div className="w-44 h-52 rounded border border-gray-200 overflow-hidden flex-shrink-0 bg-gray-200">
+        <div className="w-28 h-36 md:w-44 md:h-52 rounded border border-gray-200 overflow-hidden flex-shrink-0 bg-gray-200">
           {researcher.image && (
             <img
               src={researcher.image}
@@ -74,7 +73,7 @@ export function ProfessorProfileCard({
       <div className="flex-1 min-w-0 flex flex-col">
         {/* Name & Degree - top */}
         <div>
-          <h3 className="text-2xl font-bold text-black mb-3 font-[Inter,Pretendard,sans-serif]">
+          <h3 className="text-lg md:text-2xl font-bold text-black mb-2 md:mb-3 font-[Inter,Pretendard,sans-serif]">
             {researcher.name}
           </h3>
           <p className="text-sm font-semibold text-emerald-800 tracking-tight font-[Inter,Pretendard,sans-serif]">

@@ -32,36 +32,35 @@ export function HeroContent({
 }: HeroContentProps) {
   return (
     <motion.div
-      className={cn('flex flex-col items-center text-center md:items-start md:text-left', className)}
-      style={{ maxWidth: '620px' }}
+      className={cn('flex flex-col items-center text-center md:items-start md:text-left w-full md:w-[80%] lg:w-[67.5%] xl:w-[60%]', className)}
       variants={containerVariants}
       initial={false}
       animate="visible"
     >
       <motion.div variants={heroSubtitle}>
         <Span
-          size="lg"
+          size="sm"
           color="white"
           uppercase
           letterSpacing="wider"
-          className="font-semibold"
+          className="font-semibold md:text-[1.05em]"
         >
           {subtitle}
         </Span>
       </motion.div>
 
-      <Spacer size="lg" />
+      <Spacer size="md" />
 
       <motion.div variants={heroTitle}>
-        <Heading level={1} color="white" className="text-[1.2rem] md:text-[2.1rem] text-white">
+        <Heading level={1} color="white" className="text-[1.1rem] md:text-[2.2em] leading-[1.3] text-white">
           {title}
         </Heading>
       </motion.div>
 
-      <Spacer size="md" />
+      <Spacer size="sm" />
 
       <motion.div variants={heroDescription}>
-        <Paragraph color="white" size="xl" className="opacity-90">
+        <Paragraph color="white" size="sm" className="opacity-90 md:text-[1.4em] md:leading-[1.3]">
           {description}
         </Paragraph>
       </motion.div>

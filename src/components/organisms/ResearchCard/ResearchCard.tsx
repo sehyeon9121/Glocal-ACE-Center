@@ -48,7 +48,7 @@ export function ResearchCard({
       }}
       className={cn(
         'relative block overflow-hidden',
-        'h-[400px] max-h-[400px] w-full',
+        'h-[280px] md:h-[400px] w-full',
         'group cursor-pointer',
         className
       )}
@@ -62,11 +62,11 @@ export function ResearchCard({
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col justify-start pb-6 md:pb-8" style={{ paddingTop: '50px', paddingLeft: '48px', paddingRight: '48px' }}>
-        <h2 className="font-lato text-lg font-semibold text-white md:text-[28px] text-center" style={{ marginBottom: '25px' }}>
+      <div className="relative z-10 flex h-full flex-col justify-center items-center text-center px-6 py-6 md:px-10 md:py-10">
+        <h2 className="font-lato text-[15px] font-semibold text-white md:text-[26px] mb-3 md:mb-5">
           {title}
         </h2>
-        <p className="font-open-sans text-base leading-relaxed text-white/90 md:text-lg">
+        <p className="font-open-sans text-[13px] leading-[1.6] text-white/90 md:text-[17px] md:leading-[1.7]">
           {description}
         </p>
       </div>

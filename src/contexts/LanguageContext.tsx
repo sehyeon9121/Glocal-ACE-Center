@@ -165,11 +165,11 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Home Page - Hero
     'home.hero.subtitle': 'Glocal ACE Center',
-    'home.hero.title': 'AI 기반 글로컬 탄소중립 ACE 센터',
+    'home.hero.title': 'AI 기반 글로컬 ACE 센터',
     'home.hero.description': 'AI로 열어가는 탄소중립의 미래, 중부권에서 세계를 잇는 글로컬 혁신 거점',
     // Home Page - About
     'home.about.title': 'Glocal ACE Center',
-    'home.about.description': 'AI 기반 글로컬 탄소중립 ACE 연구소에 오신 것을 환영합니다. 우리 연구소는 AI 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 지역에서 시작해 글로벌 표준으로 확장되는 글로컬 연구 거점으로 나아가고자 합니다.',
+    'home.about.description': 'AI 기반 글로컬 ACE 연구소에 오신 것을 환영합니다. 우리 연구소는 AI 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 지역에서 시작해 글로벌 표준으로 확장되는 글로컬 연구 거점으로 나아가고자 합니다.',
     'home.research.title': '연구 주제',
     'home.research.subtitle': '미래를 위한 연구',
     'home.bigQuestions.title': 'AI 기술로 실현하는 글로컬 탄소중립 건축의 표준화 및 세계화',

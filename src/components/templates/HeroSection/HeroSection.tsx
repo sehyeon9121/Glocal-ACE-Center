@@ -18,7 +18,7 @@ export interface HeroSectionProps {
   description?: string;
   scrollTarget?: string;
   overlayOpacity?: number;
-  minHeight?: 'screen' | 'three-quarter' | 'half' | 'auto';
+  minHeight?: 'screen' | 'hero' | 'three-quarter' | 'half' | 'auto';
   height?: number;
   aspectRatio?: string; // e.g., "16/9", "7/4"
   variant?: 'landing' | 'subpage';
@@ -37,7 +37,7 @@ export function HeroSection({
   description,
   scrollTarget,
   overlayOpacity = 0.65,
-  minHeight = 'screen',
+  minHeight = 'hero',
   height: _height,
   aspectRatio,
   variant = 'landing',
@@ -47,6 +47,7 @@ export function HeroSection({
 }: HeroSectionProps) {
   const minHeightClasses = {
     screen: 'min-h-screen',
+    hero: 'h-[50vh] md:h-[85vh]',
     'three-quarter': 'min-h-[75vh]',
     half: 'min-h-[50vh]',
     auto: 'min-h-0',

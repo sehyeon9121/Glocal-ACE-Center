@@ -47,7 +47,7 @@ export function AboutContent({
         <img
           src={getImageSrc(image)}
           alt={imageAlt}
-          style={{ height: '374px', objectFit: 'cover', width: '100%' }}
+          className="w-full object-cover h-[200px] md:h-[374px]"
         />
       </motion.div>
 

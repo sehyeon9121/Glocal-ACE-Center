@@ -17,7 +17,7 @@ export function LandingHero({ className }: LandingHeroProps) {
       description={t('home.hero.description')}
       scrollTarget="#about"
       overlayOpacity={0.5}
-      aspectRatio="7/4"
+      minHeight="hero"
       className={cn(className)}
     />
   );

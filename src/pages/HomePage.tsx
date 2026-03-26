@@ -63,7 +63,7 @@ export function HomePage() {
         title={t('home.research.title')}
         subtitle={t('home.research.subtitle')}
         columns={1}
-        customGap={40}
+        gap="md"
         background="white"
         padding="xl"
       >

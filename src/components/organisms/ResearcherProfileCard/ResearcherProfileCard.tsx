@@ -21,14 +21,14 @@ export function ResearcherProfileCard({
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
       className={cn(
-        'bg-white rounded-2xl p-8',
+        'bg-white rounded-2xl p-5 md:p-8',
         'border border-gray-100 shadow-sm',
         'transition-all duration-300 ease-out',
         'hover:shadow-md',
         className
       )}
     >
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-5 md:gap-8">
         {/* Left: Profile Image + Icons */}
         <div className="flex flex-col items-center flex-shrink-0">
           {/* Profile Image */}
@@ -36,10 +36,10 @@ export function ResearcherProfileCard({
             <img
               src={researcher.image}
               alt={researcher.name}
-              className="w-32 h-40 rounded-lg border border-gray-200 object-cover"
+              className="w-24 h-32 md:w-32 md:h-40 rounded-lg border border-gray-200 object-cover"
             />
           ) : (
-            <div className="w-32 h-40 bg-gray-100 rounded-lg border border-gray-200" />
+            <div className="w-24 h-32 md:w-32 md:h-40 bg-gray-100 rounded-lg border border-gray-200" />
           )}
 
           {/* Contact Icons */}
@@ -72,7 +72,7 @@ export function ResearcherProfileCard({
         <div className="flex-1 min-w-0">
           {/* Name, Degree, Affiliation */}
           <div className="mb-1">
-            <h3 className="text-2xl font-bold text-gray-900 font-[Inter,Pretendard,sans-serif]">
+            <h3 className="text-lg md:text-2xl font-bold text-gray-900 font-[Inter,Pretendard,sans-serif]">
               {researcher.name}
             </h3>
           </div>
