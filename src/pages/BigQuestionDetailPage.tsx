@@ -5,12 +5,13 @@ import { ContentSection } from '@/components/templates/ContentSection';
 import { Container } from '@/components/atoms/Container';
 import { Link } from '@/components/atoms/Link';
 import { Icon } from '@/components/atoms/Icon';
-import { bigQuestions } from '@/data/bigQuestions';
+import { getBigQuestions } from '@/data/bigQuestions';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export function BigQuestionDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const bigQuestions = getBigQuestions(language);
 
   const question = bigQuestions.find(q => q.id === Number(id));
 
@@ -53,7 +54,7 @@ export function BigQuestionDetailPage() {
 
             {/* 핵심 연구 내용 */}
             <h2 className="text-2xl font-bold text-[#00380A] mb-6 font-[Inter,Pretendard,sans-serif]">
-              목표
+              {t('bigQuestions.goal')}
             </h2>
 
             {/* 연구 설명 */}
@@ -72,7 +73,7 @@ export function BigQuestionDetailPage() {
             {question.bulletPoints && question.bulletPoints.length > 0 && (
               <div style={{ marginTop: 18 }}>
                 <h3 className="text-xl font-bold text-gray-800 mb-4 font-[Inter,Pretendard,sans-serif]">
-                  핵심 연구 내용
+                  {t('bigQuestions.keyResearch')}
                 </h3>
                 <ul className="space-y-3">
                   {question.bulletPoints.map((point, idx) => (
@@ -106,7 +107,7 @@ export function BigQuestionDetailPage() {
             {question.participatingInstitutions && question.participatingInstitutions.length > 0 && (
               <div className="mt-12">
                 <h3 className="text-xl font-bold text-gray-800 mb-6 font-[Inter,Pretendard,sans-serif]">
-                  참여 기관
+                  {t('bigQuestions.participants')}
                 </h3>
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
                   {question.participatingInstitutions.map((inst, idx) => {

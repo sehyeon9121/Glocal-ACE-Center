@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 import { DivisionCard } from '@/components/molecules/DivisionCard';
-import { director, divisions } from '@/data/organizationData';
+import { director, viceDirector, divisions } from '@/data/organizationData';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export interface OrganizationChartProps {
   className?: string;
 }
 
 export function OrganizationChart({ className }: OrganizationChartProps) {
+  const { language } = useLanguage();
   return (
     <div className={cn('w-full', className)}>
       {/* Director Card - Top Center */}
@@ -26,17 +28,46 @@ export function OrganizationChart({ className }: OrganizationChartProps) {
           )}
           style={{ padding: 12 }}
         >
-          <div className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-300 font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 8 }}>
-            {director.title}
+          <div className="text-xl font-bold text-white font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 4 }}>
+            {director.name[language]}
           </div>
-          <div className="text-xl font-bold text-white font-[Inter,Pretendard,sans-serif]">
-            {director.name}
+          <div className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-300 font-[Inter,Pretendard,sans-serif]">
+            {director.title}
           </div>
         </div>
       </motion.div>
 
-      {/* Connecting Lines: Director → Divisions */}
-      {/* Vertical line down from Director */}
+      {/* Connecting Line: Director → Vice Director */}
+      <div className="flex justify-center">
+        <div className="w-px h-10 bg-gray-300" />
+      </div>
+
+      {/* Vice Director Card */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        className="flex justify-center" style={{ marginBottom: 20 }}
+      >
+        <div
+          className={cn(
+            'bg-[#2D5A6B] rounded-2xl',
+            'flex flex-col items-center justify-center',
+            'shadow-sm min-w-[200px]'
+          )}
+          style={{ padding: 12 }}
+        >
+          <div className="text-xl font-bold text-white font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 4 }}>
+            {viceDirector.name[language]}
+          </div>
+          <div className="text-xs font-semibold tracking-[0.15em] uppercase text-gray-300 font-[Inter,Pretendard,sans-serif]">
+            {viceDirector.title}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Connecting Line: Vice Director → Divisions */}
       <div className="flex justify-center">
         <div className="w-px h-10 bg-gray-300" />
       </div>

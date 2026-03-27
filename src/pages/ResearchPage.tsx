@@ -5,11 +5,11 @@ import { ResearchThemeCard } from '@/components/organisms/ResearchThemeCard';
 import { BigQuestionCard } from '@/components/organisms/BigQuestionCard';
 import { Paragraph } from '@/components/atoms/Paragraph';
 import { researchThemes } from '@/data/researchThemes';
-import { bigQuestions } from '@/data/bigQuestions';
+import { getBigQuestions } from '@/data/bigQuestions';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export function ResearchPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   // 번역된 연구 주제 데이터
   const themeKeyMap: Record<string, string> = {
@@ -23,11 +23,8 @@ export function ResearchPage() {
     description: t(`research.${themeKeyMap[theme.id]}.description`),
   }));
 
-  // 번역된 Big Questions 데이터
-  const translatedQuestions = bigQuestions.map((q, index) => ({
-    ...q,
-    question: t(`home.bigQuestions.q${index + 1}`),
-  }));
+  // Big Questions 데이터
+  const translatedQuestions = getBigQuestions(language);
 
   return (
     <DetailPageLayout

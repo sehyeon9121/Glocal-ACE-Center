@@ -73,7 +73,7 @@ export function ProfessorProfileCard({
       <div className="flex-1 min-w-0 flex flex-col">
         {/* Name & Degree - top */}
         <div>
-          <h3 className="text-lg md:text-2xl font-bold text-black mb-2 md:mb-3 font-[Inter,Pretendard,sans-serif]">
+          <h3 className="text-lg md:text-2xl font-bold text-black mb-[16px] font-[Inter,Pretendard,sans-serif]">
             {researcher.name}
           </h3>
           <p className="text-sm font-semibold text-emerald-800 tracking-tight font-[Inter,Pretendard,sans-serif]">
@@ -84,13 +84,13 @@ export function ProfessorProfileCard({
         {/* Introduction & History - vertically centered */}
         <div className="flex-1 flex flex-col justify-center">
           {researcher.introduction && (
-            <p className="text-sm text-gray-700 leading-relaxed mt-4 font-[Inter,Pretendard,sans-serif]">
+            <p className="text-sm text-gray-700 leading-relaxed mt-[16px] font-[Inter,Pretendard,sans-serif]">
               {researcher.introduction}
             </p>
           )}
 
           {researcher.history.length > 0 && (
-            <ul className="mt-4 space-y-1">
+            <ul className="mt-[16px] space-y-1">
               {researcher.history.map((item) => (
                 <li
                   key={item}

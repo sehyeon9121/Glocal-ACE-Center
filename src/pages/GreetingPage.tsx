@@ -32,7 +32,7 @@ export function GreetingPage() {
           {/* 하단: ACE Cards 섹션 */}
           <div>
             <p className="text-2xl font-bold text-gray-800 font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 20 }}>
-              안전하고 지속 가능한 미래를 위한 세 가지 약속을 드립니다.
+              {t('greeting.promiseTitle')}
             </p>
             <hr className="border-gray-300" style={{ marginBottom: 20 }} />
             

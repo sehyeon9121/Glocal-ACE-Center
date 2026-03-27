@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Image } from '@/components/atoms/Image';
 import { Link } from '@/components/atoms/Link';
 import { cn } from '@/utils/cn';
 import { staggerItem } from '@/utils/animations';
@@ -15,7 +14,6 @@ export function BigQuestionCard({
   id,
   question,
   content,
-  image,
   className,
   index = 0,
 }: BigQuestionCardProps) {
@@ -42,26 +40,13 @@ export function BigQuestionCard({
         style={{ transitionDelay: `${index * 0.05}s` }}
       >
         <Link href={`/big-questions/${id}`} className="flex flex-col md:flex-row" disableAnimation>
-          {/* Image */}
-          {image && (
-            <div className="flex-shrink-0 bg-gray-50 overflow-hidden w-full md:w-[240px]">
-              <div style={{ aspectRatio: '3 / 2' }} className="w-full h-full flex items-center justify-center">
-                <Image
-                  src={image}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          )}
-
           {/* Text */}
-          <div className="flex-1 p-5 md:p-8 flex flex-col justify-center">
-            <p className="text-base md:text-xl font-bold text-black leading-snug group-hover:text-[#00380A] transition-colors mb-2 md:mb-3 font-[Inter,Pretendard,sans-serif]">
+          <div className="flex-1 p-[18px] flex flex-col justify-center items-center text-center min-h-[120px] md:min-h-[160px]">
+            <p className="text-lg md:text-2xl font-bold text-black leading-snug group-hover:text-[#00380A] transition-colors mb-3 md:mb-4 font-[Inter,Pretendard,sans-serif]">
               {question}
             </p>
             {content && content.length > 0 && (
-              <p className="text-xs md:text-sm text-gray-600 leading-relaxed line-clamp-3 font-[Inter,Pretendard,sans-serif]">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed line-clamp-3 font-[Inter,Pretendard,sans-serif]">
                 {content[0]}
               </p>
             )}

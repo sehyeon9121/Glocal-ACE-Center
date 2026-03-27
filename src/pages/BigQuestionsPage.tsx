@@ -3,17 +3,12 @@ import { GridSection } from '@/components/templates/GridSection';
 import { ContentSection } from '@/components/templates/ContentSection';
 import { BigQuestionCard } from '@/components/organisms/BigQuestionCard';
 import { Paragraph } from '@/components/atoms/Paragraph';
-import { bigQuestions } from '@/data/bigQuestions';
+import { getBigQuestions } from '@/data/bigQuestions';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export function BigQuestionsPage() {
-  const { t } = useLanguage();
-
-  // 번역된 Big Questions 데이터
-  const translatedQuestions = bigQuestions.map((q, index) => ({
-    ...q,
-    question: t(`home.bigQuestions.q${index + 1}`),
-  }));
+  const { t, language } = useLanguage();
+  const translatedQuestions = getBigQuestions(language);
 
   return (
     <DetailPageLayout

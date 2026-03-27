@@ -73,7 +73,7 @@ export function HeroSection({
             <img
               src={imageSrc}
               alt=""
-              className="w-full h-auto block"
+              className="w-full h-[25vh] md:h-[42.5vh] object-cover block"
             />
             <Overlay opacity={overlayOpacity} />
           </>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 import type { DivisionData } from '@/data/organizationData';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export interface DivisionCardProps {
   division: DivisionData;
@@ -9,6 +10,8 @@ export interface DivisionCardProps {
 }
 
 export function DivisionCard({ division, index = 0, className }: DivisionCardProps) {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -34,7 +37,14 @@ export function DivisionCard({ division, index = 0, className }: DivisionCardPro
             className="w-11 h-11 rounded-lg flex items-center justify-center flex-shrink-0 text-white text-xl font-bold font-[Inter,Pretendard,sans-serif]"
             style={{ backgroundColor: division.color }}
           >
-            {division.badge}
+            {division.badge.length > 1 ? (
+              <>
+                {division.badge[0]}
+                <span className="text-xs font-semibold">{division.badge.slice(1)}</span>
+              </>
+            ) : (
+              division.badge
+            )}
           </div>
           <div className="flex flex-col justify-center min-h-[2.75rem]">
             <div className="text-2xl font-bold text-[#1e293b] font-[Inter,Pretendard,sans-serif] leading-tight">
@@ -45,7 +55,7 @@ export function DivisionCard({ division, index = 0, className }: DivisionCardPro
 
         {/* Division Subtitle */}
         <div className="flex-1 text-base font-medium text-gray-500 leading-snug font-[Inter,Pretendard,sans-serif] text-center mt-4">
-          {division.title}
+          {division.title[language]}
         </div>
 
         {/* Divider */}
@@ -54,7 +64,7 @@ export function DivisionCard({ division, index = 0, className }: DivisionCardPro
         {/* Members */}
         <div className="flex flex-col gap-4">
           {division.members.map((member) => (
-            <div key={member.name} className="flex items-center gap-3 p-4">
+            <div key={member.name[language]} className="flex items-center gap-3 p-4">
               {/* Profile Placeholder Box (CSS only) */}
               <div className="w-10 h-10 bg-gray-100 rounded-md border border-gray-200 flex-shrink-0" />
 
@@ -75,16 +85,16 @@ export function DivisionCard({ division, index = 0, className }: DivisionCardPro
                     member.profileUrl ? 'cursor-pointer' : 'cursor-default'
                   )}
                 >
-                  {member.name}
+                  {member.name[language]}
                 </button>
-                {member.role && (
+                {member.role && member.role[language] && (
                   <span className="text-xs font-medium text-gray-400 font-[Inter,Pretendard,sans-serif]">
-                    {member.role}
+                    {member.role[language]}
                   </span>
                 )}
                 {member.affiliation && (
                   <span className="text-xs font-medium text-gray-400 font-[Inter,Pretendard,sans-serif]">
-                    · {member.affiliation}
+                    · {member.affiliation[language]}
                   </span>
                 )}
               </div>

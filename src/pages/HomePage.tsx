@@ -10,11 +10,12 @@ import { AffiliationsSection } from '@/components/organisms/AffiliationsSection'
 import { Spacer } from '@/components/atoms/Spacer';
 import { ChevronDown } from 'lucide-react';
 import { researchThemes } from '@/data/researchThemes';
-import { bigQuestions } from '@/data/bigQuestions';
+import { getBigQuestions } from '@/data/bigQuestions';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export function HomePage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const bigQuestions = getBigQuestions(language);
 
   // 번역된 연구 주제 데이터
   const themeKeyMap: Record<string, string> = {
@@ -28,11 +29,8 @@ export function HomePage() {
     description: t(`research.${themeKeyMap[theme.id]}.description`),
   }));
 
-  // 번역된 Big Questions 데이터 (앞 4개만)
-  const translatedQuestions = bigQuestions.slice(0, 4).map((q, index) => ({
-    ...q,
-    question: t(`home.bigQuestions.q${index + 1}`),
-  }));
+  // Big Questions 데이터 (앞 4개만)
+  const translatedQuestions = bigQuestions.slice(0, 4);
 
   return (
     <PageLayout>
@@ -62,8 +60,8 @@ export function HomePage() {
         id="research"
         title={t('home.research.title')}
         subtitle={t('home.research.subtitle')}
-        columns={1}
-        gap="md"
+        columns={3}
+        customGap={18}
         background="white"
         padding="xl"
       >

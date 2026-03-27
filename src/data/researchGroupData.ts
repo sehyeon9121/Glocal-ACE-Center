@@ -36,7 +36,7 @@ export const researchGroups: ResearchGroup[] = [
       {
         name: 'Lee, Seung-Jae',
         degree: 'Ph.D., The University of Tokyo',
-        affiliation: 'Professor, Korea University of Technology and Education',
+        affiliation: 'Professor',
         email: 'leeseung@koreatech.ac.kr',
         website: 'https://www.koreatech.ac.kr/faculty/view.es?mid=b30103010100&division=1&classification=DEPF006&seq=144',
         image: '/images/leeseunglab/Lee.jpg',
@@ -160,7 +160,7 @@ export const researchGroups: ResearchGroup[] = [
       {
         name: 'Lee, Jin-Gang',
         degree: 'Ph.D., Seoul National University',
-        affiliation: 'Assistant Professor, Korea University of Technology and Education',
+        affiliation: 'Assistant Professor,',
         email: 'kimcs-a2@koreatech.ac.kr',
         website: 'https://example.com',
         
@@ -242,7 +242,7 @@ export const researchGroups: ResearchGroup[] = [
       {
         name: 'Bae. Jin Woo',
         degree: 'Ph.D., Seoul National University',
-        affiliation: 'Associate Professor, Korea University of Technology and Education',
+        affiliation: 'Associate Professor',
         email: 'jwbae@koreatech.ac.kr',
         website: 'https://sites.google.com/view/hopelab2020/home',
         image: '/images/leeseunglab/Bae Jin.png',
@@ -363,7 +363,7 @@ export const researchGroups: ResearchGroup[] = [
       {
         name: 'Kim, Tae-Yong',
         degree: 'Ph.D, Seoul National University',
-        affiliation: 'Associate Professor, Korea University of Technology and Education',
+        affiliation: 'Associate Professor',
         email: 'tykim11@koreatech.ac.kr',
         website: 'https://www.koreatech.ac.kr/faculty/view.es?mid=b50201000000&division=1&classification=DEPF008&seq=801',
         image: '/images/leeseunglab/Tae.png',
@@ -470,7 +470,7 @@ export const researchGroups: ResearchGroup[] = [
       {
         name: 'Kwag, Byung-Chang',
         degree: 'University of Colorado, Boulder',
-        affiliation: 'Assistant Professor, Korea University of Technology and Education',
+        affiliation: 'Assistant Professor',
         email: 'bckwag@koreatech.ac.kr',
         website: 'https://www.koreatech.ac.kr/faculty/view.es?mid=b30103010100&division=1&classification=DEPF006&seq=884',
         image: '/images/leeseunglab/bckwag.png',
@@ -539,7 +539,7 @@ export const researchGroups: ResearchGroup[] = [
       {
         name: 'Park, Soomin',
         degree: 'Ph.D., Seoul National University',
-        affiliation: 'Associate Professor, Korea University of Technology and Education',
+        affiliation: 'Associate Professor',
         email: 'smpark@koreatech.ac.kr',
         website: 'https://sites.google.com/view/theparkgroup/',
         image: '/images/leeseunglab/park.png',
