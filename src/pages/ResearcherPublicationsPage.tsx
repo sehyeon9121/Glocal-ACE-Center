@@ -45,7 +45,7 @@ export function ResearcherPublicationsPage() {
       <ContentSection background="white" padding="lg" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <Container maxWidth="none" className="max-w-[900px]">
           {/* Researcher Info Header */}
-          <div className="flex items-center gap-6 mb-10">
+          <div className="flex items-center gap-6" style={{ marginBottom: 18 }}>
             {researcher.image ? (
               <img
                 src={researcher.image}
@@ -66,7 +66,7 @@ export function ResearcherPublicationsPage() {
           </div>
 
           {/* Publications List */}
-          <h3 className="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3 font-[Inter,Pretendard,sans-serif]">
+          <h3 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-3 font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 18 }}>
             Selected Publications
           </h3>
 
@@ -79,7 +79,7 @@ export function ResearcherPublicationsPage() {
           )}
 
           {/* Back Link */}
-          <div className="mt-12">
+          <div style={{ marginTop: 18 }}>
             <Link
               to="/research-group"
               className="text-blue-600 hover:underline font-[Inter,Pretendard,sans-serif]"
@@ -108,13 +108,15 @@ function PapersByYear({ papers }: { papers: PaperEntry[] }) {
   let counter = 0;
 
   return (
-    <div className="space-y-8">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
       {grouped.map(([year, yearPapers]) => (
         <section key={year}>
+          {year > 0 && (
           <h4 className="text-2xl font-extrabold text-gray-800 mb-4 pb-2 border-b border-gray-100 font-[Inter,Pretendard,sans-serif]">
             {year}
           </h4>
-          <ol className="space-y-5">
+          )}
+          <ol style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
             {yearPapers.map((paper, i) => {
               counter++;
               return (
