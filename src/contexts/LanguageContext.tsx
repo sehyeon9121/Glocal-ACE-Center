@@ -26,7 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.climateSnacks': 'Climate Snacks',
 
     // Home Page - Hero
-    'home.hero.subtitle': 'Glocal ACE Center',
+    'home.hero.subtitle': 'Glocal Neutral ACE Center',
     'home.hero.title': 'AI-Based Neutral Glocal ACE Center',
     'home.hero.description': 'Opening the future of carbon neutrality with AI, a glocal innovation hub connecting the central region to the world.',
     // Home Page - About
@@ -173,7 +173,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.hero.description': 'AI로 열어가는 탄소중립의 미래, 중부권에서 세계를 잇는 글로컬 혁신 거점',
     // Home Page - About
     'home.about.title': 'Glocal ACE Center',
-    'home.about.description': 'AI 기반 탄소중립 글로컬 ACE 연구소에 오신 것을 환영합니다. 우리 연구소는 AI 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 지역에서 시작해 글로벌 표준으로 확장되는 글로컬 연구 거점으로 나아가고자 합니다.',
+    'home.about.description': 'AI 기반 탄소중립 글로컬 ACE 연구소에 오신 것을 환영합니다. 우리 연구소는 AI 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 지역에서 시작해 글로벌 표준으로 확장되는 글로컬 연구 거점으로 나아가고자 합니다. 오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 인공지능(AI)이 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 연구소는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 AI 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
     'home.research.title': '연구 주제',
     'home.research.subtitle': '미래를 위한 연구',
     'home.bigQuestions.title': 'AI 기술로 실현하는 글로컬 탄소중립 건축의 표준화 및 세계화',
@@ -191,8 +191,8 @@ const translations: Record<Language, Record<string, string>> = {
     'greeting.pageTitle': '인삿말',
     'greeting.title': 'Glocal ACE Center에 오신 것을 환영합니다',
     'greeting.paragraph1': 'AI 기반 글로컬 탄소중립 ACE 연구소 홈페이지를 방문해 주신 여러분을 진심으로 환영합니다.',
-    'greeting.paragraph2': '오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 인공지능(AI)이 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 연구소는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 안전과 구조의 가치를 계승하고, 이를 AI 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
-    'greeting.paragraph3': '우리 연구소의 이름인 ACE는 AI(인공지능), Carbon-neutral(탄소중립), 그리고 Excellence(수월성)를 의미합니다. 우리는 중부권 지역의 강력한 산업 인프라를 바탕으로 지역 밀착형 혁신 모델을 구축하고(Local), 이를 세계 무대에서 통용되는 글로벌 표준 기술로 승화시키는(Global) 글로컬(Glocal) 연구의 전초기지가 되고자 합니다.',
+    'greeting.paragraph2': '오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 인공지능(AI)이 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 연구소는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 AI 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
+    'greeting.paragraph3': '연구소의 명칭은 ACE는 AI(인공지능), Carbon-neutral(탄소중립), 그리고 Enviromemt & Energy(환경)을 의미합니다. 대한민국 중부권역의 강력한 산업 인프라를 바탕으로 지역 밀착형 ACE 혁신 모델을 구축하고(Local), 이를 세계 무대에서 통용되는 글로벌 표준 기술로 승화시키는(Global) 글로컬(Glocal) 연구의 전초기지가 되고자 합니다.',
     'greeting.signature': 'Glocal ACE Center',
     'greeting.backToHome': '홈으로 돌아가기',
     'greeting.readMore': '인삿말 더보기',
