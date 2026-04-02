@@ -30,7 +30,7 @@ export interface ResearchGroup {
 
 export const researchGroups: ResearchGroup[] = [
   {
-    groupName: 'Ai Division (AI-Based Carbon Neutral Design)',
+    groupName: 'Ai Division (Ai-Based Carbon Neutral Design)',
     color: '#22C55E',
     members: [
       {
@@ -44,7 +44,7 @@ export const researchGroups: ResearchGroup[] = [
           
         ],
         introduction:
-          'Professor Seung-Jae Lee received his M.S. and Ph.D. in Architectural Engineering from the University of Tokyo, specializing in structural engineering. His research focuses on earthquake-resistant structures and AI-based structural design to enhance the safety and performance of buildings. He has actively contributed to academia and industry through award-winning research and practical applications in structural engineering.',
+          'Professor Seung-Jae Lee received his M.S. and Ph.D. in Architectural Engineering from the University of Tokyo, specializing in structural engineering. His research focuses on earthquake-resistant structures and Ai-based structural design to enhance the safety and performance of buildings. He has actively contributed to academia and industry through award-winning research and practical applications in structural engineering.',
         selectedPapers: [
   {
     title: 'Existence and uniqueness of a weak solution of an extensible beam on a moving domain',
@@ -169,7 +169,7 @@ export const researchGroups: ResearchGroup[] = [
           
         ],
         introduction:
-          'Jin Gang Lee is an Assistant Professor in the Department of Architectural Engineering at KOREATECH. He earned his B.S., M.S., and Ph.D. in architecture from Seoul National University and gained both international and domestic research experience as a Postdoctoral Fellow at The Hong Kong Polytechnic University and as a researcher at Seoul National University. His research and teaching focus on Building Information Modeling (BIM) and smart construction, with an emphasis on integrating advanced technologies such as Artificial Intelligence and digital twins into the built environment. His recent work includes digital twin-based construction robotics simulation, AI-driven design automation for smart farm facilities, and the analysis of VR-based construction safety training programs.',
+          'Jin Gang Lee is an Assistant Professor in the Department of Architectural Engineering at KOREATECH. He earned his B.S., M.S., and Ph.D. in architecture from Seoul National University and gained both international and domestic research experience as a Postdoctoral Fellow at The Hong Kong Polytechnic University and as a researcher at Seoul National University. His research and teaching focus on Building Information Modeling (BIM) and smart construction, with an emphasis on integrating advanced technologies such as Artificial Intelligence and digital twins into the built environment. His recent work includes digital twin-based construction robotics simulation, Ai-driven design automation for smart farm facilities, and the analysis of VR-based construction safety training programs.',
         selectedPapers: [
   {
     title: 'OCR 을 활용한 외국인 작업자 대상 VR 건설안전 교육자료 이독성 평가',
@@ -478,7 +478,7 @@ export const researchGroups: ResearchGroup[] = [
          
         ],
         introduction:
-          'Professor Byung Chang Kwag received his M.S. and Ph.D. in Building Systems Engineering from the University of Colorado Boulder, USA. His research focuses on net-zero energy buildings, high performing buildings, and AI-based smart housing systems, with an emphasis on integrating energy efficiency, advanced control technologies, and user-centered performance evaluation. He has conducted both academic and applied research in building energy systems and housing technologies through his experience at LG Electronics and the Korea Land and Housing Research Institute. His recent work explores AI-driven energy management, human-centered smart home systems, and the development of next-generation residential infrastructures that support autonomous service robots.',
+          'Professor Byung Chang Kwag received his M.S. and Ph.D. in Building Systems Engineering from the University of Colorado Boulder, USA. His research focuses on net-zero energy buildings, high performing buildings, and Ai-based smart housing systems, with an emphasis on integrating energy efficiency, advanced control technologies, and user-centered performance evaluation. He has conducted both academic and applied research in building energy systems and housing technologies through his experience at LG Electronics and the Korea Land and Housing Research Institute. His recent work explores Ai-driven energy management, human-centered smart home systems, and the development of next-generation residential infrastructures that support autonomous service robots.',
         selectedPapers: [
   {
     title: 'Louver design and airflow patterns analysis of air conditioning outdoor units for enhanced safety and efficiency in apartment buildings',

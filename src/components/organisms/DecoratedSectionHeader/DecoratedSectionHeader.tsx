@@ -54,15 +54,6 @@ export function DecoratedSectionHeader({
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
     >
-      {/* 위 마커 */}
-      <motion.div variants={itemVariants} className="flex items-center justify-center" style={{ marginBottom: '15px' }}>
-        <img
-          src={getImageSrc('/images/leeseunglab/up_green.png')}
-          alt=""
-          style={{ filter: markerFilter }}
-        />
-      </motion.div>
-
       {/* 서브타이틀 + 메인 타이틀 */}
       <div className="flex flex-col items-center gap-0">
         {subtitle && (
@@ -76,14 +67,6 @@ export function DecoratedSectionHeader({
         </motion.h3>
       </div>
 
-      {/* 아래 마커 */}
-      <motion.div variants={itemVariants} className="flex items-center justify-center" style={{ marginTop: '15px' }}>
-        <img
-          src={getImageSrc('/images/leeseunglab/down_green.png')}
-          alt=""
-          style={{ filter: markerFilter }}
-        />
-      </motion.div>
     </motion.div>
   );
 }

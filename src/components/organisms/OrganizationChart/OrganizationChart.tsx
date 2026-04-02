@@ -39,7 +39,7 @@ export function OrganizationChart({ className }: OrganizationChartProps) {
 
       {/* Connecting Line: Director → Vice Director */}
       <div className="flex justify-center">
-        <div className="w-px h-10 bg-gray-300" />
+        <div className="w-px bg-gray-300" style={{ height: 20 }} />
       </div>
 
       {/* Vice Director Card */}
@@ -69,7 +69,7 @@ export function OrganizationChart({ className }: OrganizationChartProps) {
 
       {/* Connecting Line: Vice Director → Divisions */}
       <div className="flex justify-center">
-        <div className="w-px h-10 bg-gray-300" />
+        <div className="w-px bg-gray-300" style={{ height: 20 }} />
       </div>
 
       {/* Horizontal bar + vertical drops (Desktop) / vertical chain (Mobile) */}
@@ -93,7 +93,7 @@ export function OrganizationChart({ className }: OrganizationChartProps) {
           {divisions.map((division, index) => (
             <div key={division.id} className="flex-1 flex flex-col items-center">
               {/* Desktop: vertical drop from horizontal bar to card */}
-              <div className="hidden md:block w-px h-10 bg-gray-300" />
+              <div className="hidden md:block w-px bg-gray-300" style={{ height: 20 }} />
 
               {/* Mobile: connector between cards (not on first) */}
               {index > 0 && (

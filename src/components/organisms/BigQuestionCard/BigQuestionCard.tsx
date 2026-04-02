@@ -20,7 +20,7 @@ export function BigQuestionCard({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={cn('flex flex-col', className)}>
+    <div className={cn('flex flex-col h-full', className)}>
       {/* Card */}
       <motion.article
         variants={staggerItem}
@@ -31,18 +31,19 @@ export function BigQuestionCard({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={cn(
-          'group bg-white overflow-hidden',
+          'group bg-gray-100 overflow-hidden',
           'border border-[#DDE1E7]',
           'transition-shadow duration-300',
           'hover:shadow-lg',
           'cursor-pointer',
+          'flex-1',
         )}
         style={{ transitionDelay: `${index * 0.05}s` }}
       >
-        <Link href={`/big-questions/${id}`} className="flex flex-col md:flex-row" disableAnimation>
+        <Link href={`/big-questions/${id}`} className="flex flex-col md:flex-row h-full" disableAnimation>
           {/* Text */}
-          <div className="flex-1 p-[18px] flex flex-col justify-center items-center text-center min-h-[120px] md:min-h-[160px]">
-            <p className="text-lg md:text-2xl font-bold text-black leading-snug group-hover:text-[#00380A] transition-colors mb-3 md:mb-4 font-[Inter,Pretendard,sans-serif]">
+          <div className="flex-1 flex flex-col justify-center items-start text-left" style={{ padding: '20px 16px' }}>
+            <p className="font-lato text-[15px] md:text-[18px] lg:text-[22px] font-medium text-gray-900 leading-snug group-hover:text-[#00380A] transition-colors mb-3 md:mb-4">
               {question}
             </p>
             {content && content.length > 0 && (

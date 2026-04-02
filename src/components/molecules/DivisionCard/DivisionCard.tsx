@@ -65,8 +65,16 @@ export function DivisionCard({ division, index = 0, className }: DivisionCardPro
         <div className="flex flex-col gap-4">
           {division.members.map((member) => (
             <div key={member.name[language]} className="flex items-center gap-3 p-4">
-              {/* Profile Placeholder Box (CSS only) */}
-              <div className="w-10 h-10 bg-gray-100 rounded-md border border-gray-200 flex-shrink-0" />
+              {/* Profile Image */}
+              {member.image ? (
+                <img
+                  src={member.image}
+                  alt={member.name[language]}
+                  className="w-10 h-10 rounded-md border border-gray-200 flex-shrink-0 object-cover"
+                />
+              ) : (
+                <div className="w-10 h-10 bg-gray-100 rounded-md border border-gray-200 flex-shrink-0" />
+              )}
 
               {/* Name + Role + Affiliation */}
               <div className="flex items-center gap-1.5 flex-wrap">

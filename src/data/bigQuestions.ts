@@ -9,11 +9,11 @@ const bigQuestionsKO: BigQuestion[] = [
     image: '/images/leeseunglab/11111111.png',
     content: [
       '',
-      'AI 기반 탄소중립 설계 인프라 구축 및 지역 협력 기반 조성',
+      'Ai 기반 탄소중립 설계 인프라 구축 및 지역 협력 기반 조성',
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: 탄소중립 건축 데이터베이스(DB) 구축 및 기초 구조 최적화 알고리즘 개발',
+      'Ai: 탄소중립 건축 데이터베이스(DB) 구축 및 기초 구조 최적화 알고리즘 개발',
       '탄소중립: 저탄소 하이브리드 재료 및 구조 시스템 기초 성능 검증',
       '글로컬: 중부권 지자체 및 산업체와의 ACE 파트너십 체결 및 지역 현안 발굴',
       '성과 지표: 국내 특허 출원, 핵심 연구 인력 확보, 중부권 산학협력 거점 마련',
@@ -26,11 +26,11 @@ const bigQuestionsKO: BigQuestion[] = [
     image: '/images/leeseunglab/2222.png',
     content: [
       '',
-      'AI-탄소중립 기술 융합 및 중부권 테스트베드(Test-bed) 적용',
+      'Ai-탄소중립 기술 융합 및 중부권 테스트베드(Test-bed) 적용',
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: 디지털 트윈 기반 실시간 탄소 배출 및 구조 안전 모니터링 시스템 고도화',
+      'Ai: 디지털 트윈 기반 실시간 탄소 배출 및 구조 안전 모니터링 시스템 고도화',
       '탄소중립: 대공간 목조 및 저탄소 구조물의 시공 자동화 및 에너지 효율 최적화 기술',
       '성과 지표: 국제 저명 학술지(JCR 상위) 논문 게재, 기술 이전(Tech-Transfer), 실증 모델 구축',
       '글로컬: 중부권 주요 공공건축물 및 산업단지에 ACE 기술 실증 적용',
@@ -47,7 +47,7 @@ const bigQuestionsKO: BigQuestion[] = [
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: 생성형 AI 기반 탄소중립 건축 자동 설계 플랫폼 완성 및 상용화',
+      'Ai: 생성형 Ai 기반 탄소중립 건축 자동 설계 플랫폼 완성 및 상용화',
       '탄소중립: 글로벌 탄소 인증(LEED 등) 연계 ACE 기술 표준화 및 정책 제안',
       '글로컬: 글로벌 공동 연구 센터 운영 및 중부권 특화 탄소중립 건축 밸리 주도',
       '성과 지표: 글로벌 표준 특허 확보, 연구소 수익 모델(기술료 등) 자립화, 세계 10대 탄소중립 연구소 진입',
@@ -60,11 +60,11 @@ const bigQuestionsKO: BigQuestion[] = [
     image: '/images/leeseunglab/4444444.png',
     content: [
       '',
-      '연구 성과의 지속가능한 운영 체계를 확립하고, AI 기반 탄소중립 건축 기술의 미래 확장과 글로벌 리더십을 강화',
+      '연구 성과의 지속가능한 운영 체계를 확립하고, Ai 기반 탄소중립 건축 기술의 미래 확장과 글로벌 리더십을 강화',
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: 자율 학습 기반 AI 설계 플랫폼 고도화 및 차세대 지능형 건축 시스템으로 확장',
+      'Ai: 자율 학습 기반 Ai 설계 플랫폼 고도화 및 차세대 지능형 건축 시스템으로 확장',
       '탄소중립: 건축물 전 생애주기 통합 관리 시스템 구축 및 실시간 탄소중립 운영 기술 개발',
       '글로컬: 글로벌 협력 네트워크 확대 및 지역 기반 탄소중립 산업 생태계 지속 운영',
       '성과 지표: 스마트시티, 디지털 트윈, 에너지 자립 건축을 통합한 미래형 건축 기술 연구',
@@ -154,11 +154,11 @@ const bigQuestionsEN: BigQuestion[] = [
     image: '/images/leeseunglab/11111111.png',
     content: [
       '',
-      'Building AI-based carbon-neutral design infrastructure and establishing regional cooperation foundations',
+      'Building Ai-based carbon-neutral design infrastructure and establishing regional cooperation foundations',
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: Building a carbon-neutral architecture database (DB) and developing basic structural optimization algorithms',
+      'Ai: Building a carbon-neutral architecture database (DB) and developing basic structural optimization algorithms',
       'Carbon-neutral: Verifying basic performance of low-carbon hybrid materials and structural systems',
       'Glocal: Establishing ACE partnerships with central region municipalities and industries, identifying local issues',
       'Performance Indicators: Domestic patent applications, securing core research personnel, establishing industry-academia cooperation hub in the central region',
@@ -171,11 +171,11 @@ const bigQuestionsEN: BigQuestion[] = [
     image: '/images/leeseunglab/2222.png',
     content: [
       '',
-      'AI-carbon neutral technology convergence and central region test-bed application',
+      'Ai-carbon neutral technology convergence and central region test-bed application',
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: Advancing digital twin-based real-time carbon emission and structural safety monitoring systems',
+      'Ai: Advancing digital twin-based real-time carbon emission and structural safety monitoring systems',
       'Carbon-neutral: Construction automation and energy efficiency optimization for large-span timber and low-carbon structures',
       'Performance Indicators: Publication in top-tier international journals (JCR), technology transfer, building demonstration models',
       'Glocal: Demonstration of ACE technologies in major public buildings and industrial complexes in the central region',
@@ -192,7 +192,7 @@ const bigQuestionsEN: BigQuestion[] = [
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: Completing and commercializing a generative AI-based automatic carbon-neutral architecture design platform',
+      'Ai: Completing and commercializing a generative Ai-based automatic carbon-neutral architecture design platform',
       'Carbon-neutral: Standardization of ACE technologies linked to global carbon certification (LEED, etc.) and policy proposals',
       'Glocal: Operating global joint research centers and leading a carbon-neutral architecture valley specialized in the central region',
       'Performance Indicators: Securing global standard patents, achieving self-sustaining revenue model (technology licensing fees, etc.), entering the world\'s top 10 carbon-neutral research institutes',
@@ -205,11 +205,11 @@ const bigQuestionsEN: BigQuestion[] = [
     image: '/images/leeseunglab/4444444.png',
     content: [
       '',
-      'Establishing a sustainable operational framework for research outcomes, and strengthening future expansion and global leadership of AI-based carbon-neutral architecture technology',
+      'Establishing a sustainable operational framework for research outcomes, and strengthening future expansion and global leadership of Ai-based carbon-neutral architecture technology',
     ],
     highlights: [''],
     bulletPoints: [
-      'AI: Advancing self-learning AI design platforms and expanding to next-generation intelligent building systems',
+      'Ai: Advancing self-learning Ai design platforms and expanding to next-generation intelligent building systems',
       'Carbon-neutral: Building integrated lifecycle management systems for buildings and developing real-time carbon-neutral operation technologies',
       'Glocal: Expanding global cooperation networks and sustaining regional carbon-neutral industrial ecosystems',
       'Performance Indicators: Research on future building technologies integrating smart cities, digital twins, and energy-independent architecture',

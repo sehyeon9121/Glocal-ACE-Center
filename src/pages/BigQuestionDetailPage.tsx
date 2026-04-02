@@ -12,6 +12,7 @@ export function BigQuestionDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { t, language } = useLanguage();
   const bigQuestions = getBigQuestions(language);
+  const roadmapQuestions = bigQuestions.slice(0, 4);
 
   const question = bigQuestions.find(q => q.id === Number(id));
 
@@ -19,10 +20,10 @@ export function BigQuestionDetailPage() {
     return <Navigate to="/" replace />;
   }
 
-  // Get adjacent questions for navigation
-  const currentIndex = bigQuestions.findIndex(q => q.id === question.id);
-  const prevQuestion = currentIndex > 0 ? bigQuestions[currentIndex - 1] : null;
-  const nextQuestion = currentIndex < bigQuestions.length - 1 ? bigQuestions[currentIndex + 1] : null;
+  // Get adjacent questions for navigation (roadmap 4 phases only)
+  const currentIndex = roadmapQuestions.findIndex(q => q.id === question.id);
+  const prevQuestion = currentIndex > 0 ? roadmapQuestions[currentIndex - 1] : null;
+  const nextQuestion = currentIndex >= 0 && currentIndex < roadmapQuestions.length - 1 ? roadmapQuestions[currentIndex + 1] : null;
 
   return (
     <PageLayout>

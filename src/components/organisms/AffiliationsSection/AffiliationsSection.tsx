@@ -60,27 +60,6 @@ export function AffiliationsSection({ className }: AffiliationsSectionProps) {
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center">
-        <DecoratedSectionHeader
-          title="Glocal Neutral ACE Center"
-          subtitle=""
-          variant="light"
-          useOriginalMarker
-        />
-
-        {/* Logos */}
-        <div
-          className="flex items-center justify-center"
-          style={{ marginTop: 45, gap: 20, width: 'calc(100% - 40px)', maxWidth: 620 }}
-        >
-          {affiliations.map((affiliation) => (
-            <AffiliationLogo
-              key={affiliation.id}
-              name={affiliation.name}
-              logo={affiliation.logo}
-              url={affiliation.url}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

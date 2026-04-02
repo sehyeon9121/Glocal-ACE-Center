@@ -7,6 +7,26 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export function GreetingPage() {
   const { t } = useLanguage();
 
+  const renderCardDescription = (n: number) => {
+    const desc = t(`greeting.card${n}.description`);
+    if (n === 2) {
+      const superscripts: [string, string][] = [['Carbon', '-'], ['Energy', '+']];
+      const regex = new RegExp(`(${superscripts.map(([t]) => t).join('|')})`, 'gi');
+      const parts = desc.split(regex);
+      if (parts.length > 1) {
+        return (
+          <>
+            {parts.map((part, i) => {
+              const match = superscripts.find(([term]) => term.toLowerCase() === part.toLowerCase());
+              return match ? <span key={i}>{match[0]}<sup>{match[1]}</sup></span> : part;
+            })}
+          </>
+        );
+      }
+    }
+    return desc;
+  };
+
   return (
     <DetailPageLayout
       title={t('greeting.pageTitle')}
@@ -25,12 +45,8 @@ export function GreetingPage() {
             <p>{t('greeting.paragraph3')}</p>
           </div>
 
-          <div className="mt-8 text-right text-gray-800 font-semibold font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 20 }}>
-            <p>{t('greeting.signature')}</p>
-          </div>
-
           {/* 하단: ACE Cards 섹션 */}
-          <div>
+          <div style={{ marginTop: 20 }}>
             <p className="text-2xl font-bold text-gray-800 font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 20 }}>
               {t('greeting.promiseTitle')}
             </p>
@@ -40,18 +56,22 @@ export function GreetingPage() {
               {([1, 2, 3] as const).map((n) => (
                 <div
                   key={n}
-                  className="rounded-lg border border-gray-200 bg-gray-50 px-6 text-center hover:shadow-lg transition-shadow duration-200"
-                  style={{ paddingTop: 20, paddingBottom: 20 }}
+                  className="rounded-lg border border-gray-200 bg-gray-50 text-center hover:shadow-lg transition-shadow duration-200"
+                  style={{ padding: '12px 16px' }}
                 >
                   <h3 className="text-xl font-extrabold text-[#00380A] mb-3 font-[Inter,Pretendard,sans-serif]">
                     {t(`greeting.card${n}.title`)}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed font-[Inter,Pretendard,sans-serif]">
-                    {t(`greeting.card${n}.description`)}
+                  <p className="text-sm text-gray-600 leading-relaxed font-[Inter,Pretendard,sans-serif] text-left">
+                    {renderCardDescription(n)}
                   </p>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt-8 text-right text-gray-800 font-semibold font-[Inter,Pretendard,sans-serif]" style={{ marginBottom: 20 }}>
+            <p>{t('greeting.signature')}</p>
           </div>
 
           {/* 돌아가기 버튼 */}

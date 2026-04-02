@@ -122,7 +122,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
         {/* Logo */}
         <div className="flex items-center">
           <LogoImage
-            src="/images/leeseunglab/terrer-lab-logo.jpg"
+            src="/images/leeseunglab/terrer-lab-logo.png"
             alt="Terrer Lab"
             href="/"
             height={51}
@@ -141,11 +141,11 @@ export function NavigationBar({ className }: NavigationBarProps) {
             />
           ))}
 
-          <NavLink
+          {/* <NavLink
             href="/publications"
             label={t('nav.publications')}
             className="text-[var(--color-text)] hover:text-[var(--color-primary)]"
-          />
+          /> */}
 
           <DropdownMenu
             label={t('nav.people')}
@@ -212,7 +212,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
                 </Link>
               ))}
 
-              {/* Publications Link */}
+              {/* Publications Link - 비활성화
               <Link
                 href="/publications"
                 className="flex items-center h-12 hover:bg-gray-50 transition-colors"
@@ -223,6 +223,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
                   {t('nav.publications')}
                 </Text>
               </Link>
+              */}
 
               {/* People Accordion */}
               <div>

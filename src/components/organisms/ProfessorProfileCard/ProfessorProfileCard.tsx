@@ -15,9 +15,10 @@ export function ProfessorProfileCard({
   return (
     <div
       className={cn(
-        'flex flex-col md:flex-row gap-5 md:gap-8 bg-white border border-gray-200 rounded-lg p-4',
+        'flex flex-col md:flex-row gap-5 md:gap-8 bg-white border border-gray-200 rounded-lg',
         className
       )}
+      style={{ padding: 14 }}
     >
       {/* Left: Photo + Icons */}
       <div className="flex flex-col items-center flex-shrink-0">

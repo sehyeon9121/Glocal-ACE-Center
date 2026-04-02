@@ -28,12 +28,12 @@ export function AffiliationLogo({ name, logo, url, className }: AffiliationLogoP
         'flex items-center justify-center border border-white bg-black/10 transition-opacity hover:opacity-80 overflow-hidden',
         className
       )}
-      style={{ flex: '1 1 0', maxWidth: 300, aspectRatio: '300 / 146', minHeight: 0 }}
+      style={{ flex: '1 1 0', maxWidth: 150, aspectRatio: '300 / 146', minHeight: 0 }}
     >
       <img
         src={getImageSrc(logo)}
         alt={name}
-        style={{ maxHeight: 70, maxWidth: '85%', objectFit: 'contain' }}
+        style={{ maxHeight: 35, maxWidth: '85%', objectFit: 'contain' }}
       />
     </a>
   );

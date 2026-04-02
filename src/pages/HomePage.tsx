@@ -8,7 +8,7 @@ import { DecoratedSectionHeader } from '@/components/organisms/DecoratedSectionH
 import { BigQuestionCard } from '@/components/organisms/BigQuestionCard';
 import { AffiliationsSection } from '@/components/organisms/AffiliationsSection';
 import { Spacer } from '@/components/atoms/Spacer';
-import { ChevronDown } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { researchThemes } from '@/data/researchThemes';
 import { getBigQuestions } from '@/data/bigQuestions';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -37,7 +37,7 @@ export function HomePage() {
       {/* Hero Section */}
       <LandingHero />
 
-      <Spacer size="4xl" />
+      <div style={{ height: 20 }} />
 
       {/* About Section - Lab Introduction */}
       <ContentSection
@@ -53,7 +53,7 @@ export function HomePage() {
         />
       </ContentSection>
 
-      <Spacer size="4xl" />
+      <div style={{ height: 20 }} />
 
       {/* Research Themes Section */}
       <GridSection
@@ -97,16 +97,17 @@ export function HomePage() {
           <Spacer size="2xl" />
 
           {/* Questions List with Arrows */}
-          <div className="flex flex-col items-center w-full max-w-6xl">
+          <div className="flex flex-col md:flex-row items-center md:items-stretch w-full max-w-6xl">
             {translatedQuestions.map((question, index) => (
-              <div key={question.id} className="w-full">
+              <div key={question.id} className="flex items-center w-full md:flex-1">
                 <BigQuestionCard
                   {...question}
                   index={index}
+                  className="w-full"
                 />
                 {index < translatedQuestions.length - 1 && (
-                  <div className="flex justify-center py-6">
-                    <ChevronDown size={32} className="text-gray-400" strokeWidth={2} />
+                  <div className="flex items-center justify-center py-4 md:py-0 md:px-2">
+                    <ChevronRight size={24} className="text-gray-400 hidden md:block" strokeWidth={2} />
                   </div>
                 )}
               </div>
