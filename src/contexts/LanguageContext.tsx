@@ -26,8 +26,8 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.climateSnacks': 'Climate Snacks',
 
     // Home Page - Hero
-    'home.hero.subtitle': 'Glocal Neutral ACE Center',
-    'home.hero.title': 'Ai-Based Neutral Glocal ACE Center',
+    'home.hero.subtitle': 'Glocal ACE Center',
+    'home.hero.title': 'Ai-Based Glocal ACE Center',
     'home.hero.description': 'Opening the future of carbon neutrality with Ai, a glocal innovation hub connecting the central region to the world.',
     // Home Page - About
     'home.about.title': 'Glocal ACE Center',
@@ -173,7 +173,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.hero.description': 'Ai로 열어가는 탄소중립의 미래, 충남과 세계를 잇는 글로컬 혁신 거점',
     // Home Page - About
     'home.about.title': 'Glocal ACE Center',
-    'home.about.description': 'Ai 기반 탄소중립 글로컬 ACE 센터에 오신 것을 환영합니다. 우리 센터는 Ai 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 충남에서 시작해 글로벌 표준으로 확장되는 글로컬 탄소중립의 연구 거점으로 나아가고자 합니다. 오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 인공지능(Ai)이 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 센터는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 Ai 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
+    'home.about.description': 'Ai 기반 글로컬 탄소중립 ACE 센터에 오신 것을 환영합니다. 우리 센터는 Ai 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 충남에서 시작해 글로벌 표준으로 확장되는 글로컬 탄소중립의 연구 거점으로 나아가고자 합니다. 오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 Ai가 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 센터는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 Ai 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
     'home.research.title': '연구 주제',
     'home.research.subtitle': '미래를 위한 연구',
     'home.bigQuestions.title': 'Ai 기술로 실현하는 글로컬 탄소중립 건축의 표준화 및 세계화',
@@ -241,7 +241,7 @@ const translations: Record<Language, Record<string, string>> = {
     'people.researchAssistants': '연구 조교',
 
     // Team Page
-    'team.title': 'GLOCAL ACE CENTER을 소개합니다',
+    'team.title': 'GLOCAL ACE CENTER를 소개합니다',
     'team.team': '팀',
     'team.alumni': '학부생',
 

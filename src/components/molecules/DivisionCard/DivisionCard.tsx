@@ -40,7 +40,7 @@ export function DivisionCard({ division, index = 0, className }: DivisionCardPro
             {division.badge.length > 1 ? (
               <>
                 {division.badge[0]}
-                <span className="text-xs font-semibold">{division.badge.slice(1)}</span>
+                <sup className="text-[0.55em] font-semibold" style={{ lineHeight: 1 }}>{division.badge.slice(1)}</sup>
               </>
             ) : (
               division.badge
