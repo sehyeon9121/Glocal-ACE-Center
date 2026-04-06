@@ -1,14 +1,6 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 
-// public 폴더 이미지에 base URL 자동 추가
-const getImageSrc = (src: string): string => {
-  const baseUrl = import.meta.env.BASE_URL || '/';
-  if (src.startsWith('/') && !src.startsWith(baseUrl)) {
-    return `${baseUrl.replace(/\/$/, '')}${src}`;
-  }
-  return src;
-};
 
 export interface DecoratedSectionHeaderProps {
   title: string;
@@ -38,13 +30,12 @@ export function DecoratedSectionHeader({
   title,
   subtitle,
   variant = 'dark',
-  useOriginalMarker = false,
   className,
 }: DecoratedSectionHeaderProps) {
   const isLight = variant === 'light';
   const subtitleColor = isLight ? '#ffffff' : '#677081';
   const titleColor = isLight ? '#ffffff' : '#00380A';
-  const markerFilter = isLight && !useOriginalMarker ? 'brightness(0) invert(1)' : undefined;
+
 
   return (
     <motion.div

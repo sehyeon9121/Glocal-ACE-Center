@@ -1,9 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/utils/cn';
-import { DecoratedSectionHeader } from '@/components/organisms/DecoratedSectionHeader';
-import { AffiliationLogo } from '@/components/molecules/AffiliationLogo';
-import { affiliations } from '@/data/affiliations';
 
 const getImageSrc = (src: string): string => {
   if (src.startsWith('http') || src.startsWith('data:')) {
