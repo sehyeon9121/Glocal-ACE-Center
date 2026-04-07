@@ -26,12 +26,12 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.climateSnacks': 'Climate Snacks',
 
     // Home Page - Hero
-    'home.hero.subtitle': 'Glocal ACE Research institute',
-    'home.hero.title': 'Ai-Based Glocal ACE Research institute',
+    'home.hero.subtitle': 'Korea University of Technology and Education',
+    'home.hero.title': 'Ai Glocal ACE Research institute',
     'home.hero.description': 'Opening the future of carbon neutrality with Ai, a glocal innovation hub connecting the central region to the world.',
     // Home Page - About
     'home.about.title': 'Glocal ACE Research institute',
-    'home.about.description': 'Welcome to the Ai-based Neutral Glocal ACE Research Center. Our institute conducts research on sustainable architecture and future technology innovation based on Ai technology and carbon-neutral solutions. Starting from local foundations, we aim to become a glocal research hub that expands toward global standards.',
+    'home.about.description': 'Welcome to the Glocal ACE Research institute. Our institute conducts research on sustainable architecture and future technology innovation based on Ai technology and carbon-neutral solutions. Starting from local foundations, we aim to become a glocal research hub that expands toward global standards.',
     'home.research.title': 'Research Topics',
     'home.research.subtitle': 'Research for the Future',
     'home.bigQuestions.title': 'Standardization and Globalization of Glocal Carbon-Neutral Architecture through Ai Technology',

@@ -125,7 +125,7 @@ export function NavigationBar({ className }: NavigationBarProps) {
             src="/images/leeseunglab/terrer-lab-logo.png"
             alt="Terrer Lab"
             href="/"
-            height={51}
+            height={46}
             className="object-contain"
           />
         </div>
