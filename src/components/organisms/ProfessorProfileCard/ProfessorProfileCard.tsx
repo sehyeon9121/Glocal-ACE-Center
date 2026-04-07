@@ -78,7 +78,7 @@ export function ProfessorProfileCard({
             {researcher.name}
           </h3>
           <p className="text-sm font-semibold text-emerald-800 tracking-tight font-[Inter,Pretendard,sans-serif]">
-            {researcher.degree} · {researcher.affiliation}
+            <span className="font-bold text-gray-900">Highest Degree:</span> {researcher.degree} · {researcher.affiliation}
           </p>
         </div>
 

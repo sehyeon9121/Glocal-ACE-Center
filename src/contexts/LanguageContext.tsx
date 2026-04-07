@@ -248,7 +248,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Research Group Page
     'researchGroup.pageTitle': '연구단',
     'researchGroup.sectionTitle': 'Glocal ACE Center',
-    
+
 
     // Join Us Page
     'joinUs.title': 'GLOCAL ACE CENTER',
