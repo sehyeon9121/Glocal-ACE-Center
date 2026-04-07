@@ -26,7 +26,7 @@ export function FooterContent({ className }: FooterContentProps) {
           className="text-white/80"
           style={{ fontSize: 16 }}
         >
-          © Copyright {currentYear} | Glocal ACE Center |{' '}
+          © Copyright {currentYear} | Glocal ACE Research institute |{' '}
           <Link
             href="https://www.koreatech.ac.kr/kor/index.jsp"
             variant="white"

@@ -26,11 +26,11 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.climateSnacks': 'Climate Snacks',
 
     // Home Page - Hero
-    'home.hero.subtitle': 'Glocal ACE Center',
-    'home.hero.title': 'Ai-Based Glocal ACE Center',
+    'home.hero.subtitle': 'Glocal ACE Research institute',
+    'home.hero.title': 'Ai-Based Glocal ACE Research institute',
     'home.hero.description': 'Opening the future of carbon neutrality with Ai, a glocal innovation hub connecting the central region to the world.',
     // Home Page - About
-    'home.about.title': 'Glocal ACE Center',
+    'home.about.title': 'Glocal ACE Research institute',
     'home.about.description': 'Welcome to the Ai-based Neutral Glocal ACE Research Center. Our institute conducts research on sustainable architecture and future technology innovation based on Ai technology and carbon-neutral solutions. Starting from local foundations, we aim to become a glocal research hub that expands toward global standards.',
     'home.research.title': 'Research Topics',
     'home.research.subtitle': 'Research for the Future',
@@ -47,11 +47,11 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Greeting Page
     'greeting.pageTitle': 'Greeting',
-    'greeting.title': 'Welcome to Glocal ACE Center',
+    'greeting.title': 'Welcome to Glocal ACE Research institute',
     'greeting.paragraph1': 'We sincerely welcome you to the Ai-based Glocal Carbon-Neutral ACE Research Center website.',
     'greeting.paragraph2': 'Today, the world stands at a great technological inflection point driven by the shared challenge of climate crisis response and artificial intelligence (Ai). In response to these demands, our institute inherits the values of safety and structural engineering accumulated by the former Disaster Prevention and Safety Research Institute, and has been newly launched by expanding them with Ai technology and carbon-neutral solutions.',
     'greeting.paragraph3': 'The name ACE stands for Ai (Artificial Intelligence), Carbon-neutral, and Excellence. Based on the strong industrial infrastructure of the central region, we aim to build a locally-rooted innovation model (Local) and elevate it into globally recognized standard technologies (Global), serving as a frontline base for glocal research.',
-    'greeting.signature': 'Glocal ACE Center',
+    'greeting.signature': 'Glocal ACE Research institute',
     'greeting.backToHome': 'Back to Home',
     'greeting.readMore': 'Read More',
     'greeting.promiseTitle': 'We make three promises for a safe and sustainable future.',
@@ -73,7 +73,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Research Page
     'research.title': 'Research',
     'research.subtitle': 'We conduct research to understand how terrestrial ecosystems respond to global change',
-    'research.intro': 'The Glocal ACE Center advances knowledge about ecological dynamics impacting terrestrial carbon storage in a climate change context. We combine experimental data synthesis with modeling approaches to reduce key uncertainties about the terrestrial carbon sink.',
+    'research.intro': 'The Glocal ACE Research institute advances knowledge about ecological dynamics impacting terrestrial carbon storage in a climate change context. We combine experimental data synthesis with modeling approaches to reduce key uncertainties about the terrestrial carbon sink.',
     'research.themesTitle': 'Research Themes',
     'research.bigQuestionsTitle': 'Key Questions',
     'research.bigQuestionsSubtitle': 'The fundamental questions driving our research',
@@ -100,17 +100,17 @@ const translations: Record<Language, Record<string, string>> = {
     'people.researchAssistants': 'Research Assistants',
 
     // Team Page
-    'team.title': 'Introducing GLOCAL ACE CENTER',
+    'team.title': 'Introducing GLOCAL ACE RESEARCH INSTITUTE',
     'team.team': 'Team',
     'team.alumni': 'Undergraduate Student',
 
     // Research Group Page
     'researchGroup.pageTitle': 'Research Group',
-    'researchGroup.sectionTitle': 'Glocal ACE Center',
+    'researchGroup.sectionTitle': 'Glocal ACE Research institute',
 
     // Join Us Page
-    'joinUs.title': 'GLOCAL ACE CENTER',
-    'joinUs.subtitle': 'The Attitude of GLOCAL ACE CENTER',
+    'joinUs.title': 'GLOCAL ACE RESEARCH INSTITUTE',
+    'joinUs.subtitle': 'The Attitude of GLOCAL ACE RESEARCH INSTITUTE',
     'joinUs.values': 'Values',
     'joinUs.valuesIntro': 'In science, inclusion begins with inclusion in the research environment.',
     'joinUs.valuesDescription': 'At ACT Institute, research begins with mindset before it becomes technology. The challenges of climate change and carbon neutrality cannot be addressed through a single solution, and we believe that diverse perspectives and backgrounds are essential resources for solving structural problems. Through collaboration that transcends disciplinary boundaries, roles, and levels of experience, ACT Institute explores new possibilities for large-span timber structures.',
@@ -120,7 +120,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Contact Page
     'contact.title': 'Contact Us',
-    'contact.subtitle': 'Get in touch with the Glocal ACE Center team.',
+    'contact.subtitle': 'Get in touch with the Glocal ACE Research institute team.',
     'contact.address': 'Address',
     'contact.email': 'Email',
     'contact.phone': 'Phone',
@@ -132,7 +132,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // News Page
     'news.title': 'News',
-    'news.subtitle': 'Check out the latest updates from the Glocal ACE Center',
+    'news.subtitle': 'Check out the latest updates from the Glocal ACE Research institute',
     'news.latestNews': 'Latest News',
 
     // Climate Snacks Page
@@ -150,7 +150,7 @@ const translations: Record<Language, Record<string, string>> = {
     'language.korean': 'Korean',
 
     // Footer
-    'footer.copyright': '© 2026 GLOCAL ACE CENTER. All rights reserved.',
+    'footer.copyright': '© 2026 GLOCAL ACE RESEARCH INSTITUTE. All rights reserved.',
     'footer.contact': 'Contact',
     'footer.location': 'Location',
   },
@@ -161,7 +161,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.publications': '출판물',
     'nav.people': '구성원',
     'nav.news': '뉴스',
-    'nav.ourTeam': '센터 구성',
+    'nav.ourTeam': '연구소 구성',
     'nav.researchGroup': '사람들',
     'nav.joinUs': 'ACT INSTITUTE',
     'nav.newsUpdates': '뉴스 및 업데이트',
@@ -169,11 +169,11 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Home Page - Hero
     'home.hero.subtitle': '한국기술교육대학교',
-    'home.hero.title': 'Ai 기반 글로컬 탄소중립 ACE 센터',
+    'home.hero.title': 'Ai 기반 글로컬 탄소중립 ACE 연구소',
     'home.hero.description': 'Ai로 열어가는 탄소중립의 미래, 충남과 세계를 잇는 글로컬 혁신 거점',
     // Home Page - About
-    'home.about.title': 'Glocal ACE Center',
-    'home.about.description': 'Ai 기반 글로컬 탄소중립 ACE 센터에 오신 것을 환영합니다. 우리 센터는 Ai 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 충남에서 시작해 글로벌 표준으로 확장되는 글로컬 탄소중립의 연구 거점으로 나아가고자 합니다. 오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 Ai가 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 센터는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 Ai 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
+    'home.about.title': 'Glocal ACE Research institute',
+    'home.about.description': 'Ai 기반 글로컬 탄소중립 ACE 연구소에 오신 것을 환영합니다. 우리 연구소는 Ai 기술과 탄소중립 솔루션을 바탕으로 지속가능한 건축과 미래 기술 혁신을 연구합니다. 충남에서 시작해 글로벌 표준으로 확장되는 글로컬 탄소중립의 연구 거점으로 나아가고자 합니다. 오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 Ai가 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 연구소는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 Ai 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
     'home.research.title': '연구 주제',
     'home.research.subtitle': '미래를 위한 연구',
     'home.bigQuestions.title': 'Ai 기술로 실현하는 글로컬 탄소중립 건축의 표준화 및 세계화',
@@ -189,11 +189,11 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Greeting Page
     'greeting.pageTitle': '인삿말',
-    'greeting.title': 'Glocal ACE Center에 오신 것을 환영합니다',
-    'greeting.paragraph1': 'Ai 기반 글로컬 탄소중립 ACE 센터 홈페이지를 방문해 주신 여러분을 진심으로 환영합니다.',
+    'greeting.title': 'Glocal ACE Research institute에 오신 것을 환영합니다',
+    'greeting.paragraph1': 'Ai 기반 글로컬 탄소중립 ACE 연구소 홈페이지를 방문해 주신 여러분을 진심으로 환영합니다.',
     'greeting.paragraph2': '오늘날 전 세계는 기후 위기 대응이라는 인류 공동의 과제와 인공지능(Ai)이 주도하는 거대한 기술적 변곡점에 서 있습니다. 우리 연구소는 이러한 시대적 요구에 부응하여, 기존의 방재안전연구소가 축적해 온 건축의 안전과 구조의 가치를 계승하고, 이를 Ai 기술과 탄소중립 솔루션으로 확장하여 새롭게 출범하였습니다.',
-    'greeting.paragraph3': '센터의 명칭의 ACE는 Ai(인공지능), Carbon-neutral(탄소중립), 그리고 Enviromemt & Energy(환경)을 의미합니다. 대한민국의 중심인 충남의 강력한 산업 인프라를 바탕으로 지역 밀착형 ACE 탄소중립 혁신 모델을 구축하고(Local), 이를 세계 무대에서 통용되는 글로벌 표준 기술로 승화시키는(Global) 글로컬(Glocal) 연구의 전초기지가 되고자 합니다.',
-    'greeting.signature': 'Glocal ACE Center',
+    'greeting.paragraph3': '연구소의 명칭의 ACE는 Ai(인공지능), Carbon-neutral(탄소중립), 그리고 Enviromemt & Energy(환경)을 의미합니다. 대한민국의 중심인 충남의 강력한 산업 인프라를 바탕으로 지역 밀착형 ACE 탄소중립 혁신 모델을 구축하고(Local), 이를 세계 무대에서 통용되는 글로벌 표준 기술로 승화시키는(Global) 글로컬(Glocal) 연구의 전초기지가 되고자 합니다.',
+    'greeting.signature': 'Glocal ACE Research institute',
     'greeting.backToHome': '홈으로 돌아가기',
     'greeting.readMore': '인삿말 더보기',
     'greeting.promiseTitle': '지속 가능한 미래를 위한 세 가지 약속을 드립니다.',
@@ -241,18 +241,18 @@ const translations: Record<Language, Record<string, string>> = {
     'people.researchAssistants': '연구 조교',
 
     // Team Page
-    'team.title': 'GLOCAL ACE CENTER를 소개합니다',
+    'team.title': 'GLOCAL ACE RESEARCH INSTITUTE를 소개합니다',
     'team.team': '팀',
     'team.alumni': '학부생',
 
     // Research Group Page
     'researchGroup.pageTitle': '연구단',
-    'researchGroup.sectionTitle': 'Glocal ACE Center',
+    'researchGroup.sectionTitle': 'Glocal ACE Research institute',
 
 
     // Join Us Page
-    'joinUs.title': 'GLOCAL ACE CENTER',
-    'joinUs.subtitle': 'GLOCAL ACE CENTER 의 태도',
+    'joinUs.title': 'GLOCAL ACE RESEARCH INSTITUTE',
+    'joinUs.subtitle': 'GLOCAL ACE RESEARCH INSTITUTE 의 태도',
     'joinUs.values': '가치',
     'joinUs.valuesIntro': '과학에서의 포용은 연구실에서의 포용에서 시작됩니다.',
     'joinUs.valuesDescription': 'ACT Institute의 연구는 구조 기술 이전에 태도에서 시작됩니다. 기후 위기와 탄소 중립이라는 과제는 단일한 해법으로 해결될 수 없으며, 우리는 다양한 관점과 배경이 구조적 문제 해결의 핵심 자원이라고 믿습니다. ACT Institute는 전공, 역할, 경험의 경계를 넘는 협업을 통해 목구조 대공간 기술의 새로운 가능성을 탐구합니다.',
@@ -293,7 +293,7 @@ const translations: Record<Language, Record<string, string>> = {
     'language.korean': '한국어',
 
     // Footer
-    'footer.copyright': '© 2024 GLOCAL ACE CENTER. All rights reserved.',
+    'footer.copyright': '© 2024 GLOCAL ACE RESEARCH INSTITUTE. All rights reserved.',
     'footer.contact': '연락처',
     'footer.location': '위치',
   },
