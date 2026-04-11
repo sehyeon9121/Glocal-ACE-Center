@@ -35,7 +35,7 @@ export const director: DirectorData = {
 
 export const viceDirector: DirectorData = {
   title: 'Vice Director',
-  name: { KO: '배진우', EN: 'Kwag, Byung-Chang' },
+  name: { KO: '배진우', EN: 'Bae, Jin Woo' },
 };
 
 export const divisions: DivisionData[] = [
