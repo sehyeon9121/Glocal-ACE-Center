@@ -161,7 +161,7 @@ export const researchGroups: ResearchGroup[] = [
         name: 'Lee, Jin-Gang',
         degree: 'Ph.D., Seoul National University',
         affiliation: 'Assistant Professor,',
-        email: 'kimcs-a2@koreatech.ac.kr',
+        email: 'jglee@koreatech.ac.kr',
         website: 'https://example.com',
         
         image: '/images/leeseunglab/jingang.png',

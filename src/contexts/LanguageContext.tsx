@@ -153,6 +153,13 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.copyright': '© 2026 GLOCAL ACE RESEARCH INSTITUTE. All rights reserved.',
     'footer.contact': 'Contact',
     'footer.location': 'Location',
+
+    // Email Modal
+    'email.title': 'Email',
+    'email.subtitle': 'Check the email address.',
+    'email.copy': 'Copy',
+    'email.copied': 'Email copied!',
+    'email.close': 'Close',
   },
   KO: {
     // Navigation
@@ -296,6 +303,13 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.copyright': '© 2024 GLOCAL ACE RESEARCH INSTITUTE. All rights reserved.',
     'footer.contact': '연락처',
     'footer.location': '위치',
+
+    // Email Modal
+    'email.title': '이메일 확인',
+    'email.subtitle': '이메일을 확인하세요.',
+    'email.copy': '복사하기',
+    'email.copied': '이메일이 복사되었습니다!',
+    'email.close': '닫기',
   },
 };
 

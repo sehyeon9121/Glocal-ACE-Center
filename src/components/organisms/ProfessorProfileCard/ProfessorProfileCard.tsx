@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Globe, GraduationCap } from 'lucide-react';
 import { cn } from '@/utils/cn';
+import { EmailModal } from '@/components/molecules/EmailModal';
 import type { ResearcherProfile } from '@/data/researchGroupData';
 
 export interface ProfessorProfileCardProps {
@@ -12,6 +14,8 @@ export function ProfessorProfileCard({
   researcher,
   className,
 }: ProfessorProfileCardProps) {
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+
   return (
     <div
       className={cn(
@@ -36,13 +40,14 @@ export function ProfessorProfileCard({
         {/* Functional Icons */}
         <div className="flex justify-center gap-5" style={{ marginTop: 18 }}>
           {/* Email */}
-          <a
-            href={`mailto:${researcher.email}`}
-            className="text-gray-500 hover:text-gray-900 transition-colors duration-200"
-            title={researcher.email}
+          <button
+            type="button"
+            onClick={() => setIsEmailModalOpen(true)}
+            aria-label="Email"
+            className="text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer border-none bg-transparent p-0"
           >
             <Mail size={29} strokeWidth={1.5} />
-          </a>
+          </button>
 
           {/* Website */}
           {researcher.website && (
@@ -104,6 +109,13 @@ export function ProfessorProfileCard({
           )}
         </div>
       </div>
+
+      {/* Email Modal */}
+      <EmailModal
+        email={researcher.email}
+        isOpen={isEmailModalOpen}
+        onClose={() => setIsEmailModalOpen(false)}
+      />
     </div>
   );
 }

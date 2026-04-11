@@ -37,3 +37,6 @@ export type { CopyrightTextProps } from './CopyrightText';
 
 export { DivisionCard } from './DivisionCard';
 export type { DivisionCardProps } from './DivisionCard';
+
+export { EmailModal } from './EmailModal';
+export type { EmailModalProps } from './EmailModal';
